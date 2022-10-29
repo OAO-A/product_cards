@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from './components/Container';
 import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import './style/App.scss';
 
 function App() {
@@ -33,8 +34,8 @@ function App() {
         <div className='test D'>23</div>
         <div className='test D'>24</div>
       </Container>
+      <Footer />
     </div>
-    
   );
 }
 

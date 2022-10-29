@@ -1,0 +1,33 @@
+@use '../../style/mixins.scss' as mixins;
+
+.footer {
+  display: flex;
+  border-top: 1px solid #3B3E4A;
+  background-color: #0F1121;
+  align-items: center;
+
+
+  &_logo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 35px 290px 35px 150px;
+
+    background-image: url(../../../public/Logo.png);
+    height: 50px;
+    width: 120px;
+    background-repeat: no-repeat;
+   }
+
+   &_nav {
+    color: aliceblue;
+    margin-right: 105px;
+    font-family: serf;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+   }
+}
