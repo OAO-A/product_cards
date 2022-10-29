@@ -2,11 +2,6 @@ import React from 'react';
 import style from './style.module.scss';
 import { Props } from './Props';
 
-
 export const Container = (prop: Props) => {
-  return (
-    <div className={`${style.Container}`}>
-      {prop.children}
-    </div>
-  );  
+  return <div className={`${style.Container}`}>{prop.children}</div>;
 };

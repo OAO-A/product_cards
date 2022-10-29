@@ -1,4 +1,4 @@
-@use './mixins.scss' as mixins;
+@use "./mixins.scss" as mixins;
 
 .grid {
   display: grid;
@@ -15,21 +15,21 @@
 }
 
 .S {
-@for $start from 1 through 4 {
-  @for $end from $start through 4 {
-    &--#{$start}-#{$end} {
-      grid-column: #{$start} / #{$end+1};
+  @for $start from 1 through 4 {
+    @for $end from $start through 4 {
+      &--#{$start}-#{$end} {
+        grid-column: #{$start} / #{$end + 1};
+      }
     }
   }
-}
 }
 
 .T {
   @include mixins.onTablet {
     @for $start from 1 through 12 {
-      @for $end from $start through 12{
+      @for $end from $start through 12 {
         &--#{$start}-#{$end} {
-          grid-column: #{$start} / #{$end+1};
+          grid-column: #{$start} / #{$end + 1};
         }
       }
     }
@@ -41,10 +41,9 @@
     @for $start from 1 through 24 {
       @for $end from $start through 24 {
         &--#{$start}-#{$end} {
-          grid-column: #{$start} / #{$end+1};
+          grid-column: #{$start} / #{$end + 1};
         }
       }
     }
   }
 }
-
