@@ -1,0 +1,15 @@
+@import url(./grid.scss);
+
+body {
+  background-color: #3B3E4A ;
+}
+
+.test {
+  background: linear-gradient(51deg, #dd03e4, #5611ec);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+}
