@@ -8,5 +8,5 @@ function server() {
   });
 }
 module.exports = {
-  server: server
+  server: server,
 };

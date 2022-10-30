@@ -18,6 +18,8 @@
     "react-scripts": "5.0.1",
     "sass": "^1.55.0",
     "styled-components": "4.0.3",
+    "stylelint": "^14.14.0",
+    "stylelint-scss": "^4.3.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -27,9 +29,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install",
+    "fix-style": "npm run format && npm run lint -- --fix",
+    "prepare": "cd .. && husky install ./product_catalog-FrontEnd/.husky",
     "format": "npx prettier --write . --ignore-path .gitignore",
-    "lint": "eslint . --fix"
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,14 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.10",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "stylelint-config-recommended-scss": "^8.0.0",
     "typescript": "^4.8.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "npm run fix-style",
+      "git add"
+    ]
   }
 }
