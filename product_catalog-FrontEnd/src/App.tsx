@@ -10,7 +10,7 @@ function App() {
       <Container>
         <div className='test S--2-3 T--1-2 D--1-6'>1</div>
         <div className='test D'>2</div>
-        <div className='test D'>3</div>
+        <div className='test S'>3</div>
         <div className='test D'>4</div>
         <div className='test D'>5</div>
         <div className='test D'>6</div>
@@ -34,7 +34,6 @@ function App() {
         <div className='test D'>24</div>
       </Container>
     </div>
-    
   );
 }
 
