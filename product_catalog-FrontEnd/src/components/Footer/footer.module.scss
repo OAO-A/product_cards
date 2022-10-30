@@ -1,0 +1,87 @@
+@use '../../style/mixins.scss' as mixins;
+
+.footer {
+  display: block;
+  border-top: 1px solid #3B3E4A;
+  background-color: #0F1121;
+  height: fit-content;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+
+  &_logo {
+    width: fit-content;
+    height: fit-content;
+   }
+
+   &_nav {
+      display: block;
+     font-family: 'Mont';
+     color: aliceblue;
+     margin-bottom: 16px;
+     padding-left: 10px;
+     font-weight: 800;
+     font-size: 12px;
+     line-height: 11px;
+     text-transform: uppercase;
+     text-decoration: none;
+
+     & > *:hover {
+      text-decoration: underline;
+     }
+
+     @include mixins.onTablet {
+      display: flex;
+      margin-bottom: 0;
+      padding-left: 40px;
+      justify-content: center;
+    }
+
+     @include mixins.onDesktop {
+      display: flex;
+      margin-bottom: 0;
+      padding-left: 80px;
+      justify-content: center;
+    }
+   }
+
+   &_nav_last {
+    display: flex;
+    margin: 0 auto;
+    align-items: baseline;
+    padding-bottom: 16px;
+    width: fit-content;
+    height: 15px;
+
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    color: #75767F;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: url('../../img/Buttons/Icons/vector.svg');
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #323542;
+      width: 30px;
+      height: 30px;
+      margin-left: 16px;
+    }
+
+    @include mixins.onTablet {
+      display: flex;
+      margin: 0;
+      justify-content: flex-end;
+    }
+   }
+
+   @include mixins.onTablet {
+    display: flex;
+  }
+}
