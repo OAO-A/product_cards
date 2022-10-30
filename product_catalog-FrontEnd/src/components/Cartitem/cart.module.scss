@@ -1,0 +1,245 @@
+@use '../../style/mixins.scss' as mixins;
+
+.good_title {
+  font-family: 'Mont';
+  font-weight: 800;
+  color: #F1F2F9;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  font-size: 22px;
+  @include mixins.onTablet {
+    font-size: 32px;
+  }
+}
+
+.secondary_images {
+  display: flex;
+
+  @include mixins.onTablet {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.secondary_img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.good_wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #4A4D58;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+
+  &:hover {
+    border: 1px solid #C4C4C4;
+  }
+
+  @include mixins.onTablet {
+    margin-bottom: 8px;
+  }
+}
+
+.main_img {
+  margin-bottom: 24px;
+  height: 274px;
+  width: 274px;
+  object-fit: contain;
+
+  @include mixins.onTablet {
+    grid-row: 1/2
+  }
+
+  @include mixins.onDesktop {
+    height: 442px;
+    width: 442px;
+  }
+}
+
+.good_images {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+}
+
+.good_colors {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #3B3E4A;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+
+  & p {
+    font-family: 'Mont';
+    margin-bottom: 8px;
+    color: #75767F;
+  }
+}
+
+.good_id {
+  font-family: 'Mont';
+  font-size: 12px;
+  font-weight: 700;
+  color: #75767F;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.good_color {
+  display: inline-block;
+  border: 1px solid #3B3E4A;
+  border-radius: 36px;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+
+  &:hover {
+    border: 1px solid #75767F;
+  }
+
+  ;
+
+  &:focus {
+    border: 1px solid #F1F2F9;
+  }
+}
+
+.color_button {
+  border-radius: 36px;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #0F1121;
+}
+
+.button_1 {
+  background-color: #FCDBC1
+}
+
+.button_2 {
+  background-color: #5F7170
+}
+
+.button_3 {
+  background-color: #4C4C4C
+}
+
+.button_4 {
+  background-color: #F0F0F0
+}
+
+.good_capacity {
+  border-bottom: 1px solid #3B3E4A;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+
+  & p {
+    font-family: 'Mont', sans-serif;
+    margin-bottom: 8px;
+    color: #75767F;
+  }
+}
+
+.capacity_selector {
+  font-family: 'Mont';
+  margin-right: 8px;
+  background-color: #4A4D58;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  border: none;
+  height: 32px;
+  width: fit-content;
+  outline: none;
+
+  &:focus {
+    background-color: #F1F2F9;
+  }
+}
+
+.good_prices {
+  font-family: 'Mont';
+  font-weight: 800;
+  line-height: 41px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  &_previous {
+    text-decoration: line-through;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #75767F;
+  }
+
+  &_current {
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    color: #F1F2F9;
+    margin-right: 8px;
+  }
+}
+
+.good_purchaise {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.purchaise_btn {
+  width: 231px;
+  height: 48px;
+  background: #905BFF;
+  border: none;
+  color: #F1F2F9;
+  font-family: 'Mont';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+
+  @include mixins.onTablet {
+    width: 80%;
+  }
+}
+
+.favorite_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #323542;
+  border: none;
+  width: 48px;
+  height: 48px;
+}
+
+.good_details {
+
+}
+
+.good_detail {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Mont';
+  margin-bottom: 8px;
+
+  &_1 {
+    color: #75767F
+  }
+
+  &_2 {
+    color: #F1F2F9
+  }
+}

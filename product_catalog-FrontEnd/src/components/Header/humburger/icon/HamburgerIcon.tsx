@@ -27,8 +27,8 @@ export const HamburgerIcon: React.FC = () => {
         >
           <circle
             r="16"
-            cx="17"
-            cy="17"
+            cx="18"
+            cy="18"
           ></circle>
         </svg>
         <div className={classNames(

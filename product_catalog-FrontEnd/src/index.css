@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'Mont';
+  font-weight: 400;
+  src: local('Mont'), url(./fonts/Mont-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Mont';
+  font-weight: 700;
+  src: local('Mont'), url(./fonts//Mont-SemiBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Mont';
+  font-weight: 800;
+  src: local('Mont'), url(./fonts/Mont-Bold.otf) format('opentype');
+}

@@ -2,9 +2,8 @@
 
 .hamburger_icon {
   box-shadow: -1px 0px 0px #323542;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 
   height: 48px;
   width: 48px;
