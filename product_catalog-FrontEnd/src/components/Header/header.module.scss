@@ -1,8 +1,127 @@
+@use '../../style/mixins.scss' as mixins;
+
 .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0px 1px 0px #323542;
+  
+  margin-bottom: 24px;
+
+  @include mixins.onTablet {
+    margin-bottom: 32px;
+  }
+
+  @include mixins.onDesktop {
+    margin-bottom: 56px;
+  }
+
+
   &_logo {
     display: block;
     background-image: url(../../../public/Logo.png);
-    height: 50px;
+    height: 48px;
+    width: 120px;
+    background-repeat: no-repeat;
+  }
+
+  &_favorites {
+    display: block;
+    background-image: url(../../../public/favoriteIcon.svg);
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+
+  }
+
+  &_shopping_bag {
+    display: block;
+    background-image: url(../../../public/shopping_bag.svg);
+    height: 16px;
+    width: 16px;
     background-repeat: no-repeat;
   }
 }
+
+.nav {
+  display: none;
+
+  @include mixins.onTablet {
+    display: flex;
+  }
+  
+  &_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &_item {
+    // position: relative;
+    list-style: none;
+
+    &:not(:last-child){
+      margin-right: 32px;
+
+      @include mixins.onDesktop {
+        margin-right: 64px;
+      }
+    }
+  }
+
+  &_link {
+    @extend %link-style;
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 3px;
+    //   background: #fff;
+    // }
+  }
+}
+
+.main_wrapper {
+  display: flex;
+}
+
+.functional_wrapper {
+  display: flex;
+
+  &_box {
+    display: none;
+    box-shadow: -1px 0px 0px #323542;
+    justify-content: center;
+    align-items: center;
+
+    height: 48px;
+    width: 48px;
+
+    @include mixins.onTablet{
+      display: flex;
+    }
+
+    @include mixins.onDesktop {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+%link-style {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #75767F;
+}
+
