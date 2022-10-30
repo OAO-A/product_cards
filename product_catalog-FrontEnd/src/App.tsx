@@ -1,15 +1,16 @@
 import React from 'react';
+import './style/App.scss';
 import { Container } from './components/Container';
 import { Header } from './components/Header';
-import { CartItem } from './components/Cartitem';
-import './style/App.scss';
+import { Outlet } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Container>
-        <CartItem />
+        <Outlet />
       </Container>
     </div>
   );
