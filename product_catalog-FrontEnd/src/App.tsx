@@ -4,6 +4,7 @@ import { Container } from './components/Container';
 import { Header } from './components/Header';
 import { Outlet } from 'react-router-dom';
 import { Footer } from './components/Footer';
+import { Card } from './components/CardLayout';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Header />
       <Container>
         <Outlet />
+        <Card />
+        <Card />
       </Container>
       <Footer />
     </div>
