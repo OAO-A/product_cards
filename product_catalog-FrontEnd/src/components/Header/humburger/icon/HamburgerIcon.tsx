@@ -16,25 +16,30 @@ export const HamburgerIcon: React.FC = () => {
       <label
         htmlFor="toggle-hamburger"
         className={`${style.toggle_label}`}
-        id="toggle-label"
       >
         <svg
-          className={classNames(`${style.toggle_label_circle}`, {
-            [`${style.circle_opened}`]: isOpen,
-          })}
-          width="38px"
-          height="38px"
+          width="36px"
+          height="36px"
         >
-          <circle r="16" cx="18" cy="18"></circle>
+          <circle
+            className={classNames(
+              `${style.toggle_label_circle}`,
+              { [`${style.circle_opened}`]: isOpen },
+            )}
+            r="16"
+            cx="18"
+            cy="18"
+          ></circle>
         </svg>
-        <div
-          className={classNames(`${style.toggle_label_hamburger}`, {
-            [`${style.label_hamburger_opened}`]: isOpen,
-          })}
-        >
-          <div
-            className={!isOpen ? `${style.center}` : `${style.center_opened}`}
-          ></div>
+        <div className={classNames(
+          `${style.toggle_label_hamburger}`,
+          { [`${style.label_hamburger_opened}`]: isOpen }
+        )}>
+          <div className={
+            !isOpen
+              ? `${style.center}`
+              : `${style.center_opened}`
+          }></div>
         </div>
       </label>
     </div>

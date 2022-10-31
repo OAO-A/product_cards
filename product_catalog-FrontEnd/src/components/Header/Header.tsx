@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import style from './header.module.scss';
 import { HamburgerIcon } from './humburger/icon';
+import { Navigation } from './navigation';
 
 export const Header: React.FC = () => {
   return (
@@ -9,30 +10,7 @@ export const Header: React.FC = () => {
       <div className={`${style.main_wrapper}`}>
         <Link to="/" className={`${style.header_logo}`}></Link>
 
-        <nav className={`${style.nav}`}>
-          <ul className={`${style.nav_list}`}>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/" className={`${style.nav_link}`}>
-                home
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/phones" className={`${style.nav_link}`}>
-                phones
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/tablets" className={`${style.nav_link}`}>
-                tablets
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/accessories" className={`${style.nav_link}`}>
-                accessories
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <Navigation />
       </div>
 
       <div className={`${style.functional_wrapper}`}>

@@ -43,48 +43,6 @@
   }
 }
 
-.nav {
-  display: none;
-
-  @include mixins.onTablet {
-    display: flex;
-  }
-
-  &_list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &_item {
-    // position: relative;
-    list-style: none;
-
-    &:not(:last-child) {
-      margin-right: 32px;
-
-      @include mixins.onDesktop {
-        margin-right: 64px;
-      }
-    }
-  }
-
-  &_link {
-    @extend %link-style;
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 3px;
-    //   background: #fff;
-    // }
-  }
-}
-
 .main_wrapper {
   display: flex;
 }
