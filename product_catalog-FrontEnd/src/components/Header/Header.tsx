@@ -4,25 +4,32 @@ import style from './header.module.scss';
 import { HamburgerIcon } from './humburger/icon';
 
 export const Header: React.FC = () => {
-
   return (
     <header className={`${style.header}`}>
       <div className={`${style.main_wrapper}`}>
-        <Link to='/' className={`${style.header_logo}`}></Link>
+        <Link to="/" className={`${style.header_logo}`}></Link>
 
         <nav className={`${style.nav}`}>
           <ul className={`${style.nav_list}`}>
             <li className={`${style.nav_item}`}>
-              <NavLink to="/" className={`${style.nav_link}`}>home</NavLink>
+              <NavLink to="/" className={`${style.nav_link}`}>
+                home
+              </NavLink>
             </li>
             <li className={`${style.nav_item}`}>
-              <NavLink to="/phones" className={`${style.nav_link}`}>phones</NavLink>
+              <NavLink to="/phones" className={`${style.nav_link}`}>
+                phones
+              </NavLink>
             </li>
             <li className={`${style.nav_item}`}>
-              <NavLink to="/tablets" className={`${style.nav_link}`}>tablets</NavLink>
+              <NavLink to="/tablets" className={`${style.nav_link}`}>
+                tablets
+              </NavLink>
             </li>
             <li className={`${style.nav_item}`}>
-              <NavLink to="/accessories" className={`${style.nav_link}`}>accessories</NavLink>
+              <NavLink to="/accessories" className={`${style.nav_link}`}>
+                accessories
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -30,10 +37,16 @@ export const Header: React.FC = () => {
 
       <div className={`${style.functional_wrapper}`}>
         <div className={`${style.functional_wrapper_box}`}>
-          <NavLink to="/favorites" className={`${style.header_favorites}`}></NavLink>
+          <NavLink
+            to="/favorites"
+            className={`${style.header_favorites}`}
+          ></NavLink>
         </div>
         <div className={`${style.functional_wrapper_box}`}>
-          <NavLink to="/basket" className={`${style.header_shopping_bag}`}></NavLink >
+          <NavLink
+            to="/basket"
+            className={`${style.header_shopping_bag}`}
+          ></NavLink>
         </div>
         <HamburgerIcon />
         {/* <div>

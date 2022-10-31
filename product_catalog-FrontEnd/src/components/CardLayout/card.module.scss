@@ -1,0 +1,123 @@
+@use "../../style/mixins.scss" as mixins;
+@use "../../style/_vars.scss" as vars;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 250px;
+
+  background-color: vars.$color-surface1;
+  padding: 0 32px;
+
+  &__img {
+    height: 190px;
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+
+  &__name {
+    color: vars.$color-white;
+    font-family: "Mont";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    color: vars.$color-white;
+    font-family: "Mont";
+    font-size: 22px;
+    font-weight: 800;
+
+    &_amount {
+      margin-bottom: 24px;
+
+      &::after {
+        content: "$999";
+        font-weight: normal;
+        color: vars.$color-secondary;
+        text-decoration: line-through;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #3b3e4a;
+      width: 208px;
+      margin-top: -15px;
+      height: 2px;
+    }
+
+    &_item {
+      color: vars.$color-secondary;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    &_info {
+      color: vars.$color-white;
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-align: end;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__buy {
+    background-color: vars.$color-purple;
+    border: none;
+    color: vars.$color-white;
+    margin-right: 8px;
+    font-family: "Mont";
+    font-size: 14px;
+    font-weight: 700;
+    width: 160px;
+    height: 40px;
+
+    &:hover {
+      background-color: #a378ff;
+    }
+
+    &:focus {
+      background-color: #323542;
+    }
+  }
+
+  &__fav {
+    background-color: vars.$color-surface2;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #3b3e4a;
+
+    &::after {
+      content: url("../../img/heart.svg");
+    }
+
+    &:hover {
+      background-color: vars.$color-icons;
+    }
+
+    &:focus {
+      background-color: transparent;
+
+      &::after {
+        content: url("../../img/heart2.svg");
+      }
+    }
+  }
+}
