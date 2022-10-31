@@ -13,50 +13,60 @@ const Basket = sequelize.define('basket', {
   userId: { type: DataTypes.INTEGER, unique: true, allowNull: false },
 });
 
+const Favourite = sequelize.define('favourite', {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  userId: { type: DataTypes.INTEGER, unique: true, allowNull: false },
+});
+
 const Device = sequelize.define('device', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  namespaceId:  { type: DataTypes.STRING, allowNull: false },
   category: { type: DataTypes.STRING, allowNull: false },
   phoneId: { type: DataTypes.STRING, unique: true, allowNull: false },
   itemId: { type: DataTypes.STRING, unique: true, allowNull: false },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
-  fullPrice: { type: DataTypes.INTEGER },
-  price: { type: DataTypes.INTEGER, allowNull: false },
+  priceRegular: { type: DataTypes.INTEGER },
+  priceDiscount: { type: DataTypes.INTEGER, allowNull: false },
+  description: { type: DataTypes.STRING,
+    get() {
+      return JSON.parse(this.getDataValue('device'));
+    }, 
+    set(value) {
+      return this.setDataValue('device', JSON.stringify(value));
+    } },
   screen: { type: DataTypes.STRING },
   capacity: { type: DataTypes.STRING },
+  capacityAvailable: { type: DataTypes.ARRAY(DataTypes.STRING)},
   color: { type: DataTypes.STRING },
+  colorsAvailable: { type: DataTypes.ARRAY(DataTypes.STRING)},
+  processor: { type: DataTypes.STRING },
+  camer: { type: DataTypes.STRING },
   rm: { type: DataTypes.STRING },
+  zoom: { type: DataTypes.STRING },
   year: { type: DataTypes.INTEGER },
-  image: { type: DataTypes.STRING, allowNull: false },
+  ceil: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
+  images: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
+  image: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false}
 });
 
-const DeviceInfo = sequelize.define('device', {
+const Categories = sequelize.define('Categories', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  category: { type: DataTypes.STRING, allowNull: false },
-  phoneId: { type: DataTypes.STRING, unique: true, allowNull: false },
-  itemId: { type: DataTypes.STRING, unique: true, allowNull: false },
-  name: { type: DataTypes.STRING, unique: true, allowNull: false },
-  fullPrice: { type: DataTypes.INTEGER },
-  price: { type: DataTypes.INTEGER, allowNull: false },
-  screen: { type: DataTypes.STRING },
-  capacity: { type: DataTypes.STRING },
-  color: { type: DataTypes.STRING },
-  rm: { type: DataTypes.STRING },
-  year: { type: DataTypes.INTEGER },
-  image: { type: DataTypes.STRING, allowNull: false },
+  name: { type: DataTypes.STRING, allowNull: false },
 });
 
-// {
-//   "id": "1",
-//   "category": "phones",
-//   "phoneId": "apple-iphone-7-32gb-black",
-//   "itemId": "apple-iphone-7-32gb-black",
-//   "name": "Apple iPhone 7 32GB Black",
-//   "fullPrice": 400,
-//   "price": 375,
-//   "screen": "4.7' IPS",
-//   "capacity": "32GB",
-//   "color": "black",
-//   "ram": "2GB",
-//   "year": 2016,
-//   "image": "img/phones/apple-iphone-7/black/00.jpg"
-// },
+User.hasOne(Basket);
+Basket.belongsTo(User);
+
+User.hasMany(Favourite);
+Favourite.belongsTo(User);
+
+Categories.hasMany(Device);
+Device.belongsTo(Categories);
+
+module.exports = {
+  User, 
+  Basket,
+  Device,
+  Categories,
+  Favourite
+};
