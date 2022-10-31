@@ -20,25 +20,27 @@ const Favourite = sequelize.define('favourite', {
 
 const Device = sequelize.define('device', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  namespaceId:  { type: DataTypes.STRING, allowNull: false },
+  namespaceId: { type: DataTypes.STRING, allowNull: false },
   category: { type: DataTypes.STRING, allowNull: false },
   phoneId: { type: DataTypes.STRING, unique: true, allowNull: false },
   itemId: { type: DataTypes.STRING, unique: true, allowNull: false },
   name: { type: DataTypes.STRING, unique: true, allowNull: false },
   priceRegular: { type: DataTypes.INTEGER },
   priceDiscount: { type: DataTypes.INTEGER, allowNull: false },
-  description: { type: DataTypes.STRING,
+  description: {
+    type: DataTypes.STRING,
     get() {
       return JSON.parse(this.getDataValue('device'));
-    }, 
+    },
     set(value) {
       return this.setDataValue('device', JSON.stringify(value));
-    } },
+    },
+  },
   screen: { type: DataTypes.STRING },
   capacity: { type: DataTypes.STRING },
-  capacityAvailable: { type: DataTypes.ARRAY(DataTypes.STRING)},
+  capacityAvailable: { type: DataTypes.ARRAY(DataTypes.STRING) },
   color: { type: DataTypes.STRING },
-  colorsAvailable: { type: DataTypes.ARRAY(DataTypes.STRING)},
+  colorsAvailable: { type: DataTypes.ARRAY(DataTypes.STRING) },
   processor: { type: DataTypes.STRING },
   camer: { type: DataTypes.STRING },
   rm: { type: DataTypes.STRING },
@@ -46,7 +48,7 @@ const Device = sequelize.define('device', {
   year: { type: DataTypes.INTEGER },
   ceil: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
   images: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
-  image: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false}
+  image: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
 });
 
 const Categories = sequelize.define('Categories', {
@@ -64,9 +66,9 @@ Categories.hasMany(Device);
 Device.belongsTo(Categories);
 
 module.exports = {
-  User, 
+  User,
   Basket,
   Device,
   Categories,
-  Favourite
+  Favourite,
 };
