@@ -1,4 +1,4 @@
-@use '../../../../style/mixins.scss' as mixins;
+@use "../../../../style/mixins.scss" as mixins;
 
 .hamburger_icon {
   box-shadow: -1px 0px 0px #323542;
@@ -8,7 +8,6 @@
   height: 48px;
   width: 48px;
 
-  
   @include mixins.onTablet {
     display: none;
   }
@@ -61,7 +60,6 @@
     }
   }
 }
-
 
 .toggle_label_hamburger::before,
 .toggle_label_hamburger .center,

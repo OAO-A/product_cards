@@ -11,7 +11,7 @@ import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter >
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} >
           <Route path='/phones' >
@@ -29,13 +29,12 @@ root.render(
           <Route path='/basket' element={<h1>in developing</h1>}/> 
     
           <Route index element={<h1>in developing</h1>} />
-          <Route path='/home' element={<Navigate to='/' replace/> } />
-          <Route path='*' element={<NotFoundPage /> } />
+          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
-
 );
 
 reportWebVitals();
