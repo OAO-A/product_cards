@@ -19,7 +19,7 @@ root.render(
               <h1>in developing</h1>
             } />
             <Route path=':itemId' element={
-              <h1>in developing</h1>
+              <CartItem />
             } />
           </Route>
 
@@ -27,7 +27,6 @@ root.render(
           <Route path='/accessories' element={<h1>in developing</h1>} />
           <Route path='/favorites' element={<h1>in developing</h1>} />
           <Route path='/basket' element={<h1>in developing</h1>}/> 
-          <Route path='/cardItem' element={<CartItem />} />
     
           <Route index element={<h1>in developing</h1>} />
           <Route path='/home' element={<Navigate to='/' replace/> } />
