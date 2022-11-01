@@ -1,0 +1,15 @@
+@use "../../../../style/mixins.scss" as mixins;
+
+.mob_nav {
+  display: grid;
+  // place-items: center;
+
+  @include mixins.onTablet {
+    display: none;
+  }
+}
+
+// .fixed-position {
+//   position: fixed;
+//   overflow-y: hidden;
+// }

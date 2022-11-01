@@ -1,36 +1,31 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './header.module.scss';
 import { HamburgerIcon } from './humburger/icon';
 import { Navigation } from './navigation';
+import { Functional_wrapper } from './functional_wrapper';
 
-export const Header: React.FC = () => {
+type Props = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+};
+
+export const Header: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className={`${style.header}`}>
       <div className={`${style.main_wrapper}`}>
         <Link to="/" className={`${style.header_logo}`}></Link>
 
-        <Navigation />
+        <div className={`${style.nav_bar}`}>
+          <div className={`${style.PC_navigation}`}>
+            <Navigation />
+          </div>
+        </div>
       </div>
 
-      <div className={`${style.functional_wrapper}`}>
-        <div className={`${style.functional_wrapper_box}`}>
-          <NavLink
-            to="/favorites"
-            className={`${style.header_favorites}`}
-          ></NavLink>
-        </div>
-        <div className={`${style.functional_wrapper_box}`}>
-          <NavLink
-            to="/basket"
-            className={`${style.header_shopping_bag}`}
-          ></NavLink>
-        </div>
-        <HamburgerIcon />
-        {/* <div>
-        </div> */}
-      </div>
+      <Functional_wrapper />
 
+      <HamburgerIcon isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       {/* <div>
         
         <a href=""></a> 

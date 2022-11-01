@@ -1,0 +1,40 @@
+@use "../../../style/mixins.scss" as mixins;
+
+.functional_wrapper {
+  display: flex;
+
+  &_box {
+    display: none;
+    box-shadow: -1px 0px 0px #323542;
+    justify-content: center;
+    align-items: center;
+
+    height: 48px;
+    width: 48px;
+
+    @include mixins.onTablet {
+      display: flex;
+    }
+
+    @include mixins.onDesktop {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.favorites {
+  display: block;
+  background-image: url(../../../../public/favoriteIcon.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.shopping_bag {
+  display: block;
+  background-image: url(../../../../public/shopping_bag.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
