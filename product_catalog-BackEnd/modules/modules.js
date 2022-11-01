@@ -26,8 +26,8 @@ const Device = sequelize.define('device', {
   itemId: { type: DataTypes.STRING, unique: true, allowNull: false },
   name: { type: DataTypes.STRING, unique: true },
   priceRegular: { type: DataTypes.INTEGER },
-  priceDiscount: { type: DataTypes.INTEGER},
-  description: { type: DataTypes.JSON},
+  priceDiscount: { type: DataTypes.INTEGER },
+  description: { type: DataTypes.JSON },
   screen: { type: DataTypes.STRING },
   capacity: { type: DataTypes.STRING },
   capacityAvailable: { type: DataTypes.ARRAY(DataTypes.STRING) },
@@ -38,9 +38,9 @@ const Device = sequelize.define('device', {
   rm: { type: DataTypes.STRING },
   zoom: { type: DataTypes.STRING },
   year: { type: DataTypes.INTEGER },
-  ceil: { type: DataTypes.ARRAY(DataTypes.STRING)},
+  ceil: { type: DataTypes.ARRAY(DataTypes.STRING) },
   images: { type: DataTypes.ARRAY(DataTypes.STRING) },
-  image: { type: DataTypes.ARRAY(DataTypes.STRING),}
+  image: { type: DataTypes.ARRAY(DataTypes.STRING) },
 });
 
 User.hasOne(Basket);

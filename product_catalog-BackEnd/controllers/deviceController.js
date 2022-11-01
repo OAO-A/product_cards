@@ -9,7 +9,7 @@ class DeviceController {
     try {
       const { image } = req.files;
       const filesName = uuid.v4() + '.jpg';
-      image.mv(path.resolve(__dirname, '..', 'static', filesName ));
+      image.mv(path.resolve(__dirname, '..', 'static', filesName));
 
       const device = await Device.create({
         ...req.body,

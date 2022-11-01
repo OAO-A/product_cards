@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Device extends Model {
     /**
@@ -13,31 +11,34 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Device.init({
-    namespaceId: DataTypes.STRING,
-    category: DataTypes.STRING,
-    phoneId: DataTypes.STRING,
-    itemId: DataTypes.STRING,
-    name:DataTypes.STRING,
-    priceRegular: DataTypes.INTEGER,
-    priceDiscount: DataTypes.INTEGER,
-    description: DataTypes.ARRAY(DataTypes.JSON),
-    screen: DataTypes.STRING ,
-    capacity: DataTypes.STRING ,
-    capacityAvailable: DataTypes.ARRAY(DataTypes.STRING),
-    color: DataTypes.STRING ,
-    colorsAvailable: DataTypes.ARRAY(DataTypes.STRING),
-    processor: DataTypes.STRING,
-    camera: DataTypes.STRING ,
-    ram: DataTypes.STRING ,
-    zoom: DataTypes.STRING ,
-    year: DataTypes.INTEGER,
-    cell: DataTypes.ARRAY(DataTypes.STRING),
-    images: DataTypes.ARRAY(DataTypes.STRING),
-    resolution: DataTypes.STRING,
-  }, {
-    sequelize,
-    modelName: 'Device',
-  });
+  Device.init(
+    {
+      namespaceId: DataTypes.STRING,
+      category: DataTypes.STRING,
+      phoneId: DataTypes.STRING,
+      itemId: DataTypes.STRING,
+      name: DataTypes.STRING,
+      priceRegular: DataTypes.INTEGER,
+      priceDiscount: DataTypes.INTEGER,
+      description: DataTypes.ARRAY(DataTypes.JSON),
+      screen: DataTypes.STRING,
+      capacity: DataTypes.STRING,
+      capacityAvailable: DataTypes.ARRAY(DataTypes.STRING),
+      color: DataTypes.STRING,
+      colorsAvailable: DataTypes.ARRAY(DataTypes.STRING),
+      processor: DataTypes.STRING,
+      camera: DataTypes.STRING,
+      ram: DataTypes.STRING,
+      zoom: DataTypes.STRING,
+      year: DataTypes.INTEGER,
+      cell: DataTypes.ARRAY(DataTypes.STRING),
+      images: DataTypes.ARRAY(DataTypes.STRING),
+      resolution: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: 'Device',
+    }
+  );
   return Device;
 };
