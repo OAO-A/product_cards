@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/product_cards/static/css/main.1e1b54da.css",
-    "main.js": "/product_cards/static/js/main.6efd14f6.js",
+    "main.css": "/product_cards/static/css/main.0aacfae7.css",
+    "main.js": "/product_cards/static/js/main.b9d0a7e9.js",
     "static/js/787.75629a37.chunk.js": "/product_cards/static/js/787.75629a37.chunk.js",
-    "static/media/category-phones.png": "/product_cards/static/media/category-phones.af93d992917380dfe206.png",
     "static/media/Mont-Regular.otf": "/product_cards/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
     "static/media/Mont-SemiBold.otf": "/product_cards/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
     "static/media/Mont-Bold.otf": "/product_cards/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
@@ -14,17 +13,14 @@
     "static/media/04.jpg": "/product_cards/static/media/04.cf76cad5834823a18f6b.jpg",
     "static/media/shopping_bag.svg": "/product_cards/static/media/shopping_bag.c6d6212a3ea700d6002e.svg",
     "static/media/favoriteIcon.svg": "/product_cards/static/media/favoriteIcon.bda5fbc9746bfe2e1329.svg",
-    "static/media/heart.svg": "/product_cards/static/media/heart.bda5fbc9746bfe2e1329.svg",
-    "static/media/like.svg": "/product_cards/static/media/like.a48831a1ed897e1e3553ac68690493cf.svg",
-    "static/media/heart2.svg": "/product_cards/static/media/heart2.d554a185325e4fb06092.svg",
     "index.html": "/product_cards/index.html",
     "static/media/vector.svg": "/product_cards/static/media/vector.93dcd0cdf72df28e1594.svg",
-    "main.1e1b54da.css.map": "/product_cards/static/css/main.1e1b54da.css.map",
-    "main.6efd14f6.js.map": "/product_cards/static/js/main.6efd14f6.js.map",
+    "main.0aacfae7.css.map": "/product_cards/static/css/main.0aacfae7.css.map",
+    "main.b9d0a7e9.js.map": "/product_cards/static/js/main.b9d0a7e9.js.map",
     "787.75629a37.chunk.js.map": "/product_cards/static/js/787.75629a37.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e1b54da.css",
-    "static/js/main.6efd14f6.js"
+    "static/css/main.0aacfae7.css",
+    "static/js/main.b9d0a7e9.js"
   ]
 }
