@@ -12,6 +12,7 @@ function App() {
       <Header />
       <Container>
         <Outlet />
+        <CartItem />
       </Container>
       <Footer />
     </div>
