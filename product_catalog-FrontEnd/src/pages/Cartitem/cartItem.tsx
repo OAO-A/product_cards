@@ -16,11 +16,13 @@ export const CartItem = () => {
         Apple iPhone 11 Pro Max 64GB Gold (iMT9G2FS/A)
       </h2>
       <div className={`${style.good_images} S--1-4 T--1-7 D--1-11`}>
+
         <img
           src={img1}
           alt="main-img"
           className={`${style.main_img} D--4-12 S--1-4 T--3-6`}
         />
+
         <div className={`${style.secondary_images} S--1-4 T--1-2`}>
           <div className={`${style.good_wrapper} D--1-1`}>
             <img

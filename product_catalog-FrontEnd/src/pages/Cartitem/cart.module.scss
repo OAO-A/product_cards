@@ -7,6 +7,7 @@
 
 .good_title {
   font-weight: 800;
+
   margin-bottom: 40px;
   padding-top: 30px;
   font-size: 22px;
@@ -95,13 +96,16 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
   border-bottom: 1px solid #3b3e4a;
+
   padding-bottom: 20px;
   margin-bottom: 24px;
 
   & p {
     font-family: "Mont";
     font-size: 12px;
+
     margin-bottom: 8px;
     color: #75767f;
   }
@@ -169,6 +173,7 @@
   & p {
     font-family: "Mont";
     font-size: 12px;
+
     margin-bottom: 8px;
     color: #75767f;
   }
@@ -177,8 +182,10 @@
 .capacity_selector {
   font-family: "Mont";
   margin-right: 8px;
+
   background-color: #0f1121;
   color: #f1f2f9;
+
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0em;
@@ -188,8 +195,10 @@
   outline: none;
 
   &:focus {
+
     background-color: #f1f2f9;
     color: #0f1121;
+
   }
 }
 
@@ -343,5 +352,7 @@
 }
 
 .spec_content {
+
   color: #f1f2f9;
 }
+
