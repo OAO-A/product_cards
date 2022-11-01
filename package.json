@@ -1,0 +1,19 @@
+{
+  "name": "-nice-gadgets-product_catalog-2",
+  "version": "1.0.0",
+  "description": "[DEMO LINK]( https://oao-a.github.io/product_cards/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OAO-A/product_cards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OAO-A/product_cards/issues"
+  },
+  "homepage": "https://github.com/OAO-A/product_cards#readme"
+}
