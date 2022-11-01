@@ -14,13 +14,13 @@ export const Footer: React.FC = () => {
         />
       </a>
       <div className={`${style.footer_nav}`}>
-        <a href="#" className={`${style.footer_nav}`}>
+        <a href="/github" className={`${style.footer_nav}`}>
           github
         </a>
-        <a href="#" className={`${style.footer_nav}`}>
+        <a href="/contnacts" className={`${style.footer_nav}`}>
           contacts
         </a>
-        <a href="#" className={`${style.footer_nav}`}>
+        <a href="/rights" className={`${style.footer_nav}`}>
           rights
         </a>
         <a href="" className={`${style.footer_nav}`} hidden></a>
