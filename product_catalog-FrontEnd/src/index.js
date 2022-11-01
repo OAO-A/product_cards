@@ -4,14 +4,15 @@ import './index.css';
 import App from './App.tsx';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { CartItem } from './pages/Cartitem';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+import { HomePage } from './pages/HomePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<App />} >
           <Route path='/phones' >
@@ -28,12 +29,12 @@ root.render(
           <Route path='/favorites' element={<h1>in developing</h1>} />
           <Route path='/basket' element={<h1>in developing</h1>}/> 
     
-          <Route index element={<h1>in developing</h1>} />
+          <Route index element={<HomePage />} />
           <Route path="/home" element={<Navigate to="/" replace />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
