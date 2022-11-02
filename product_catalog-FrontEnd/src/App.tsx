@@ -13,8 +13,9 @@ function App() {
   return (
     <div className="App">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      {isMenuOpen && 
-        <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>}
+      {isMenuOpen && (
+        <HamburgerMenu setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+      )}
       <Container>
         <Outlet />
         <Card />
@@ -22,7 +23,7 @@ function App() {
         <Card />
         <Card />
       </Container>
-      <Footer isMenuOpen={isMenuOpen}/>
+      <Footer isMenuOpen={isMenuOpen} />
     </div>
   );
 }

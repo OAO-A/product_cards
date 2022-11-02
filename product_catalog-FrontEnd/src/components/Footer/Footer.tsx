@@ -7,9 +7,9 @@ import classNames from 'classnames';
 
 type Props = {
   isMenuOpen: boolean;
-}
+};
 
-export const Footer: React.FC<Props> = ({isMenuOpen}) => {
+export const Footer: React.FC<Props> = ({ isMenuOpen }) => {
   return (
     <footer className={classNames(
       `${style.footer}`,
