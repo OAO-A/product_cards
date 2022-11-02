@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './navigation.module.scss';
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 
 type Props = {
   isMenuOpen?: boolean;
@@ -9,10 +10,17 @@ type Props = {
 };
 
 export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
+  const animateFrom = { opacity: 0, x: 40 };
+  const animateTo = { opacity: 1, x: 0 };
   return (
     <nav>
       <ul className={`${style.nav_list}`}>
-        <li className={`${style.nav_item}`}>
+        <motion.li
+          initial={animateFrom}
+          animate={animateTo}
+          transition={{ delay: 0.05 }}
+          className={`${style.nav_item}`}
+        >
           <NavLink
             to="/"
             className={({ isActive }) =>
@@ -23,8 +31,13 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           >
             home
           </NavLink>
-        </li>
-        <li className={`${style.nav_item}`}>
+        </motion.li>
+        <motion.li
+          initial={animateFrom}
+          animate={animateTo}
+          transition={{ delay: 0.10 }}
+          className={`${style.nav_item}`}
+        >
           <NavLink
             to="/phones"
             className={({ isActive }) =>
@@ -35,8 +48,13 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           >
             phones
           </NavLink>
-        </li>
-        <li className={`${style.nav_item}`}>
+        </motion.li>
+        <motion.li
+          initial={animateFrom}
+          animate={animateTo}
+          transition={{ delay: 0.20 }}
+          className={`${style.nav_item}`}
+        >
           <NavLink
             to="/tablets"
             className={({ isActive }) =>
@@ -47,8 +65,13 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           >
             tablets
           </NavLink>
-        </li>
-        <li className={`${style.nav_item}`}>
+        </motion.li>
+        <motion.li
+          initial={animateFrom}
+          animate={animateTo}
+          transition={{ delay: 0.30 }}
+          className={`${style.nav_item}`}
+        >
           <NavLink
             to="/accessories"
             className={({ isActive }) =>
@@ -59,7 +82,7 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           >
             accessories
           </NavLink>
-        </li>
+        </motion.li>
       </ul>
     </nav>
   );
