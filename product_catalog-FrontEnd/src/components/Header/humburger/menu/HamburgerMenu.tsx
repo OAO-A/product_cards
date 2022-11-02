@@ -12,11 +12,13 @@ export const HamburgerMenu: React.FC<Props> = ({
   setIsMenuOpen,
   isMenuOpen,
 }) => {
-
   useEffect(() => {
     document.body.classList.add(`${style.lock_scroll}`);
+    window.scrollTo(0, 0);
 
-    return () => document.body.classList.remove(`${style.lock_scroll}`);
+    return () => {
+      document.body.classList.remove(`${style.lock_scroll}`);
+    };
   }, [isMenuOpen]);
 
   return (
