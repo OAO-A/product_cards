@@ -1,6 +1,6 @@
 const uuid = require('uuid');
 const path = require('path');
-const { Device } = require('../modules/modules');
+const Device  = require('../models/device');
 const phones = require('../data/phones');
 const ApiError = require('../error/ApiError');
 
@@ -39,7 +39,8 @@ class DeviceController {
   }
 
   async getOne(req, res) {
-    const { id } = req.body;
+    const {id} = req.params;
+    console.log(Device);
     const device = await Device.findOne({ where: { id } });
     return res.json(device);
   }
