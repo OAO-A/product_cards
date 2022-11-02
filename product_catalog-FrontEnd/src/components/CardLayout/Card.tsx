@@ -7,11 +7,12 @@ export const Card: React.FC = () => {
     <div className={Style.card} data-qa="card">
       <img src={phone} alt="/" className={Style.card__img} />
       <p className={Style.card__name}>
-        Apple iPhone 14 Pro 128GB Silver (MQ023)
+        Apple iPhone Xs 64GB Silver (iMT9G2FS/A)
       </p>
 
       <div className={Style.card__price}>
-        <p className={Style.card__price_amount}>$800</p>
+        <p className={Style.card__price_old}>$899</p>
+        <p className={Style.card__price_new}>$1899</p>
       </div>
 
       <div className={Style.card__stats}>
@@ -22,9 +23,9 @@ export const Card: React.FC = () => {
         </div>
 
         <div className={Style.card__stats_info}>
-          <p className={Style.card__stats_info}>6.1” OLED</p>
-          <p className={Style.card__stats_info}>128 GB</p>
-          <p className={Style.card__stats_info}>6 GB</p>
+          <p className={Style.card__stats_info}>5.8” OLED</p>
+          <p className={Style.card__stats_info}>64 GB</p>
+          <p className={Style.card__stats_info}>4 GB</p>
         </div>
       </div>
 
