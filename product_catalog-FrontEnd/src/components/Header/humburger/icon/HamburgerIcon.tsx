@@ -19,14 +19,8 @@ export const HamburgerIcon: React.FC<Props> = ({
         className={`${style.checkbox_input}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       />
-      <label
-        htmlFor="toggle-hamburger"
-        className={`${style.toggle_label}`}
-      >
-        <svg
-          width="36px"
-          height="36px"
-        >
+      <label htmlFor="toggle-hamburger" className={`${style.toggle_label}`}>
+        <svg width="36px" height="36px">
           <circle
             className={classNames(`${style.toggle_label_circle}`, {
               [`${style.circle_opened}`]: isMenuOpen,

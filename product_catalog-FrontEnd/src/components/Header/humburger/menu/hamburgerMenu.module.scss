@@ -1,8 +1,10 @@
 @use "../../../../style/mixins.scss" as mixins;
 
 .mob_nav {
-  display: grid;
-  // place-items: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 
   @include mixins.onTablet {
     display: none;

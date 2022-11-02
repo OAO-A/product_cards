@@ -23,15 +23,11 @@ export const Header: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
         </div>
       </div>
 
-      <Functional_wrapper />
+      <div className={`${style.wrapper}`}>
+        <Functional_wrapper setIsMenuOpen={setIsMenuOpen} />
+      </div>
 
       <HamburgerIcon isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      {/* <div>
-        
-        <a href=""></a> 
-        component with hamburger icon will be here
-         
-      </div> */}
     </header>
   );
 };

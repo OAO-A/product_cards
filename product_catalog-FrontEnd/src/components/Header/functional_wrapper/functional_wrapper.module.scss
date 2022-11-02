@@ -1,19 +1,21 @@
 @use "../../../style/mixins.scss" as mixins;
 
 .functional_wrapper {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
 
   &_box {
-    display: none;
+    display: flex;
     box-shadow: -1px 0px 0px #323542;
+    border-top: 1px solid #323542;
     justify-content: center;
     align-items: center;
-
     height: 48px;
-    width: 48px;
+    position: relative;
 
     @include mixins.onTablet {
-      display: flex;
+      width: 48px;
+      border: none;
     }
 
     @include mixins.onDesktop {
@@ -37,4 +39,18 @@
   height: 16px;
   width: 16px;
   background-repeat: no-repeat;
+}
+
+.choosed_link {
+  color: #f1f2f9;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f1f2f9;
+  }
 }
