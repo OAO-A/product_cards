@@ -2,19 +2,12 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import style from './header.module.scss';
 import { HamburgerIcon } from './humburger/icon';
-import logo from '../../img/Logo2.png';
 
 export const Header: React.FC = () => {
   return (
     <header className={`${style.header}`}>
       <div className={`${style.main_wrapper}`}>
-        <Link to="/" className={`${style.header_logo}`}>
-          <img
-            src={logo}
-            id="top"
-            alt="nice-gadget"
-          />
-        </Link>
+        <Link to="/" className={`${style.header_logo}`}></Link>
 
         <nav className={`${style.nav}`}>
           <ul className={`${style.nav_list}`}>
