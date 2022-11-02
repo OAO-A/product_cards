@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './hamburgerMenu.module.scss';
 import { Navigation } from '../../navigation';
 import { Functional_wrapper } from '../../functional_wrapper';
@@ -12,6 +12,13 @@ export const HamburgerMenu: React.FC<Props> = ({
   setIsMenuOpen,
   isMenuOpen,
 }) => {
+
+  useEffect(() => {
+    document.body.classList.add(`${style.lock_scroll}`);
+
+    return () => document.body.classList.remove(`${style.lock_scroll}`);
+  }, [isMenuOpen]);
+
   return (
     <div className={`${style.mob_nav}`}>
       <Navigation setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />

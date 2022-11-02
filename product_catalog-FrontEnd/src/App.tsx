@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style/App.scss';
-// import classNames from 'classnames';
 import { Container } from './components/Container';
 import { Header } from './components/Header';
 import { Outlet } from 'react-router-dom';
@@ -14,7 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      {isMenuOpen && <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>}
+      {isMenuOpen && 
+        <HamburgerMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>}
       <Container>
         <Outlet />
         <Card />
@@ -22,7 +22,7 @@ function App() {
         <Card />
         <Card />
       </Container>
-      <Footer />
+      <Footer isMenuOpen={isMenuOpen}/>
     </div>
   );
 }
