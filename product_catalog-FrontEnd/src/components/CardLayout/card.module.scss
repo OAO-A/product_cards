@@ -28,21 +28,21 @@
   }
 
   &__price {
+    display: flex;
     color: vars.$color-white;
     font-family: "Mont";
     font-size: 22px;
     font-weight: 800;
 
-    &_amount {
+    &_old {
       margin-bottom: 24px;
+    }
 
-      &::after {
-        content: "$999";
-        font-weight: normal;
-        color: vars.$color-secondary;
-        text-decoration: line-through;
-        margin-left: 8px;
-      }
+    &_new {
+      font-weight: normal;
+      color: vars.$color-secondary;
+      text-decoration: line-through;
+      margin-left: 8px;
     }
   }
 
