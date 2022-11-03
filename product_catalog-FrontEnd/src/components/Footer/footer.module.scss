@@ -10,14 +10,8 @@
   border-top: 1px solid #3b3e4a;
   background-color: #0f1121;
   padding: 10px;
-  margin: 10px;
   justify-content: space-between;
   align-items: center;
-
-  &_logo {
-    width: fit-content;
-    height: fit-content;
-  }
 
   &_nav {
     display: block;
