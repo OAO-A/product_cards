@@ -35,7 +35,7 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
         <motion.li
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.10 }}
+          transition={{ delay: 0.1 }}
           className={`${style.nav_item}`}
         >
           <NavLink
@@ -52,7 +52,7 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
         <motion.li
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.20 }}
+          transition={{ delay: 0.2 }}
           className={`${style.nav_item}`}
         >
           <NavLink
@@ -69,7 +69,7 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
         <motion.li
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.30 }}
+          transition={{ delay: 0.3 }}
           className={`${style.nav_item}`}
         >
           <NavLink
