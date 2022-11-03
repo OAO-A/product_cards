@@ -71,7 +71,7 @@
   "lint-staged": {
     "*.ts": [
       "npm run fix-style",
-      "git add"
+      "git add ."
     ]
   }
 }

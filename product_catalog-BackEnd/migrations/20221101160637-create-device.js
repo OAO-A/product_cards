@@ -16,7 +16,14 @@ module.exports = {
       name: { type: Sequelize.STRING, unique: true },
       priceRegular: { type: Sequelize.INTEGER },
       priceDiscount: { type: Sequelize.INTEGER },
-      description: { type: Sequelize.JSONB },
+      description: { type: Sequelize.TEXT,
+        get: function () {
+          return JSON.parse(this.getDataValue('value'));
+        },
+        set: function (value) {
+          this.setDataValue('value', JSON.stringify(value)); 
+        },
+      },
       screen: { type: Sequelize.STRING },
       capacity: { type: Sequelize.STRING },
       capacityAvailable: { type: Sequelize.ARRAY(Sequelize.STRING) },

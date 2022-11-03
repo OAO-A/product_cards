@@ -1,4 +1,5 @@
 'use strict';
+const description = require('./20221101175224-demo-device.data.json');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -40,3 +41,4 @@ module.exports = {
     await queryInterface.bulkDelete('Devices', null, {});
   },
 };
+

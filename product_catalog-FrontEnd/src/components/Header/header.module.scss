@@ -19,8 +19,9 @@
   }
 
   &_logo {
-    display: block;
-    background-image: url(../../../public/Logo.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 48px;
     width: 120px;
     background-repeat: no-repeat;

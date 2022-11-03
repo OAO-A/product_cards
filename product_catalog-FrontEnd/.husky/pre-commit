@@ -2,5 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd ./product_catalog-FrontEnd
-npm run fix-style
-npx lint-staged
+
+npx lint-staged -q

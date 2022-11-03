@@ -1,0 +1,75 @@
+@use "../../style/mixins.scss" as mixins;
+
+.title {
+  font-family: "Mont";
+  font-weight: 800;
+  font-size: 32px;
+
+  color: #f1f2f9;
+  margin-bottom: 40px;
+  padding-top: 30px;
+
+  @include mixins.onTablet {
+    font-size: 48px;
+  }
+}
+
+.continer {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: solid 1px #323542;
+  margin-top: 32px;
+  max-height: 170px;
+
+  @include mixins.onDesktop {
+    margin-top: 0;
+  }
+}
+
+.totalCost {
+  font-family: Mont;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 41px;
+  text-align: center;
+  color: #f1f2f9;
+}
+
+.totalSubtilte {
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #75767f;
+}
+
+.line {
+  width: 100%;
+  border-bottom: solid 1px #323542;
+  margin: 16px 0;
+}
+
+.buyButton {
+  font-family: Mont;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #f1f2f9;
+  background-color: #905bff;
+  padding: 13px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
