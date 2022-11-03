@@ -23,19 +23,19 @@ class DeviceController {
   }
 
   async getAll(req, res) {
-    // const { category, limit = 1, page = 9 } = req.query;
-    // let devices = await Device.findAndCountAll({ limit, offset });
-    // let offset = page * limit - limit;
-    // if (!category) {
-    //   devices = await Device.findAndCountAll({
-    //     where: { category },
-    //     limit,
-    //     offset,
-    //   });
-    // }
+    const { category, limit = 1, page = 9 } = req.query;
+    let offset = page * limit - limit;
+    let devices = await Device.findAndCountAll({ limit, offset });
+    if (!category) {
+      devices = await Device.findAndCountAll({
+        where: { category },
+        limit,
+        offset,
+      });
+    }
 
-    // return res.json(devices);
-    return res.json(phones);
+    return res.json(devices);
+    // return res.json(phones);
   }
 
   async getOne(req, res) {

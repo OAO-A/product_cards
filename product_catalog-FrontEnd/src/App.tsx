@@ -12,10 +12,6 @@ function App() {
       <Header />
       <Container>
         <Outlet />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </Container>
       <Footer />
     </div>
