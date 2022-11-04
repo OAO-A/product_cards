@@ -1,10 +1,17 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './header.module.scss';
 import { HamburgerIcon } from './humburger/icon';
 import Logo from '../../img/Logo2.png';
+import { Navigation } from './navigation';
+import { Functional_wrapper } from './functional_wrapper';
 
-export const Header: React.FC = () => {
+type Props = {
+  isMenuOpen: boolean;
+  setIsMenuOpen: (isOpen: boolean) => void;
+};
+
+export const Header: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className={`${style.header}`}>
       <div className={`${style.main_wrapper}`}>
@@ -12,56 +19,18 @@ export const Header: React.FC = () => {
           <img src={Logo} alt="nice_gadget" />
         </Link>
 
-        <nav className={`${style.nav}`}>
-          <ul className={`${style.nav_list}`}>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/" className={`${style.nav_link}`}>
-                home
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/phones" className={`${style.nav_link}`}>
-                phones
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/tablets" className={`${style.nav_link}`}>
-                tablets
-              </NavLink>
-            </li>
-            <li className={`${style.nav_item}`}>
-              <NavLink to="/accessories" className={`${style.nav_link}`}>
-                accessories
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        <div className={`${style.nav_bar}`}>
+          <div className={`${style.PC_navigation}`}>
+            <Navigation />
+          </div>
+        </div>
       </div>
 
-      <div className={`${style.functional_wrapper}`}>
-        <div className={`${style.functional_wrapper_box}`}>
-          <NavLink
-            to="/favorites"
-            className={`${style.header_favorites}`}
-          ></NavLink>
-        </div>
-        <div className={`${style.functional_wrapper_box}`}>
-          <NavLink
-            to="/basket"
-            className={`${style.header_shopping_bag}`}
-          ></NavLink>
-        </div>
-        <HamburgerIcon />
-        {/* <div>
-        </div> */}
+      <div className={`${style.wrapper}`}>
+        <Functional_wrapper setIsMenuOpen={setIsMenuOpen} />
       </div>
 
-      {/* <div>
-        
-        <a href=""></a> 
-        component with hamburger icon will be here
-         
-      </div> */}
+      <HamburgerIcon isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
   );
 };

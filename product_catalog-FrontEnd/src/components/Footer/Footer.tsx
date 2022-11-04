@@ -3,10 +3,19 @@ import style from './footer.module.scss';
 import { Link, NavLink } from 'react-router-dom';
 
 import logo from '../../img/Logo.png';
+import classNames from 'classnames';
 
-export const Footer: React.FC = () => {
+type Props = {
+  isMenuOpen: boolean;
+};
+
+export const Footer: React.FC<Props> = ({ isMenuOpen }) => {
   return (
-    <footer className={`${style.footer}`}>
+    <footer
+      className={classNames(`${style.footer}`, {
+        [`${style.menu_opened}`]: isMenuOpen,
+      })}
+    >
       <Link to="/">
         <img
           src={logo}
