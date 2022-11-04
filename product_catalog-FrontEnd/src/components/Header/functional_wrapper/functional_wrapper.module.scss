@@ -1,0 +1,56 @@
+@use "../../../style/mixins.scss" as mixins;
+
+.functional_wrapper {
+  display: grid;
+  grid-auto-flow: column;
+
+  &_box {
+    display: flex;
+    box-shadow: -1px 0px 0px #323542;
+    border-top: 1px solid #323542;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    position: relative;
+
+    @include mixins.onTablet {
+      width: 48px;
+      border: none;
+    }
+
+    @include mixins.onDesktop {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.favorites {
+  display: block;
+  background-image: url(../../../../public/favoriteIcon.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.shopping_bag {
+  display: block;
+  background-image: url(../../../../public/shopping_bag.svg);
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+}
+
+.choosed_link {
+  color: #f1f2f9;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f1f2f9;
+  }
+}
