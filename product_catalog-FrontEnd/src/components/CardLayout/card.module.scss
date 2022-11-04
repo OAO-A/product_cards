@@ -54,7 +54,8 @@
       content: "";
       position: absolute;
       background-color: #3b3e4a;
-      width: 208px;
+      width: 100%;
+      max-width: 185px;
       margin-top: -15px;
       height: 2px;
     }

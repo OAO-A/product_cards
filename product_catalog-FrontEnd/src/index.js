@@ -8,6 +8,7 @@ import { HashRouter } from 'react-router-dom';
 import { CartItemPage } from './pages/CartItemPage/';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { HomePage } from './pages/HomePage';
+import { PhonesPage } from './pages/PhonesPage';
 import { BasketPage } from './pages/BasketPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/phones">
-            <Route index element={<h1>in developing</h1>} />
+            <Route index element={<PhonesPage />} />
             <Route path=":itemId" element={<h1>in developing</h1>} />
           </Route>
 
@@ -27,8 +28,8 @@ root.render(
           <Route path="/basket" element={<BasketPage />} />
           <Route path="/cardItem" element={<CartItemPage />} />
 
-          <Route index element={<HomePage />} />
-          <Route path="/home" element={<Navigate to="/" replace />} />
+          <Route index element={<Navigate to="/home"/>} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
