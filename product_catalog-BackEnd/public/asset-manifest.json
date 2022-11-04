@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c93a95ee.css",
+    "main.js": "/static/js/main.8db88394.js",
+    "static/js/787.75629a37.chunk.js": "/static/js/787.75629a37.chunk.js",
+    "static/media/category-phones.png": "/static/media/category-phones.af93d992917380dfe206.png",
+    "static/media/Mont-Regular.otf": "/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
+    "static/media/Mont-SemiBold.otf": "/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
+    "static/media/Mont-Bold.otf": "/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
+    "static/media/01.jpg": "/static/media/01.1742c2a7a18f02123a0a.jpg",
+    "static/media/03.jpg": "/static/media/03.a57d70f55c46436d7014.jpg",
+    "static/media/02.jpg": "/static/media/02.9f67a6622e152411c044.jpg",
+    "static/media/00.jpg": "/static/media/00.bcc8d59330807bd155b0.jpg",
+    "static/media/pngegg.png": "/static/media/pngegg.1cb9f56083be0517228e.png",
+    "static/media/04.jpg": "/static/media/04.cf76cad5834823a18f6b.jpg",
+    "static/media/shopping_bag.svg": "/static/media/shopping_bag.c6d6212a3ea700d6002e.svg",
+    "static/media/favoriteIcon.svg": "/static/media/favoriteIcon.bda5fbc9746bfe2e1329.svg",
+    "static/media/heart.svg": "/static/media/heart.bda5fbc9746bfe2e1329.svg",
+    "static/media/heart2.svg": "/static/media/heart2.d554a185325e4fb06092.svg",
+    "index.html": "/index.html",
+    "static/media/vector.svg": "/static/media/vector.93dcd0cdf72df28e1594.svg",
+    "main.c93a95ee.css.map": "/static/css/main.c93a95ee.css.map",
+    "main.8db88394.js.map": "/static/js/main.8db88394.js.map",
+    "787.75629a37.chunk.js.map": "/static/js/787.75629a37.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c93a95ee.css",
+    "static/js/main.8db88394.js"
+  ]
+}
