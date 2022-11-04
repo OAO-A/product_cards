@@ -28,7 +28,7 @@ root.render(
           <Route path="/basket" element={<BasketPage />} />
           <Route path="/cardItem" element={<CartItemPage />} />
 
-          <Route index element={<Navigate to="/home"/>} />
+          <Route index element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

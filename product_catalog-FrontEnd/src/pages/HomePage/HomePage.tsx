@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
       console.log(info);
     });
   return (
-    <> 
+    <>
       <h1 className={`${style.title} S--1-4 T--1-12 D--1-24`}>РАБОТАЕМ!!!</h1>
     </>
   );
