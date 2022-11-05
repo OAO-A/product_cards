@@ -13,14 +13,6 @@ export const BasketPage: React.FC = () => {
     }
   }, [info]);
 
-  fetch('https://nice-gadjet-products-catalogue.herokuapp.com/api/device')
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      setInfo(data);
-    });
-
   return (
     <>
       <h1 className={`${style.title}`}>Cart</h1>

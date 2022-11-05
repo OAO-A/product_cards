@@ -39,7 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       sequelize,
       modelName: 'Device',
     },
-    Device.create()
   );
   return Device;
 };

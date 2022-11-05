@@ -51,3 +51,5 @@ module.exports = {
     await queryInterface.dropTable('Devices');
   },
 };
+
+
