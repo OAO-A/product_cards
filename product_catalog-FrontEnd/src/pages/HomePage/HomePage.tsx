@@ -5,7 +5,7 @@ import style from './style.module.scss';
 export const HomePage: React.FC = () => {
   const [info, setInfo] = useState([]);
 
-  fetch('https://nice-gadjet-products-catalogue.herokuapp.com/api/device')
+  fetch('https://product-catalog-nice.herokuapp.com/api/device')
     .then((response) => {
       return response.json();
     })

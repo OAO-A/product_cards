@@ -42,7 +42,6 @@
 
 .upCart {
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,11 +65,12 @@
 
   height: 32px;
   width: 32px;
-
+  transition: background-color 1s;
   background-color: #323542;
 }
 
 .disActive {
+  transition: background-color 1s;
   background-color: #161827;
 }
 
@@ -87,6 +87,7 @@
   font-weight: 600;
   line-height: 21px;
   text-align: center;
+
   color: #f1f2f9;
 }
 
@@ -97,7 +98,11 @@
   font-size: 22px;
   color: #f1f2f9;
   line-height: 140%;
+
+  display: flex;
+  justify-content: flex-end;
+
   @include mixins.onTablet {
-    margin-left: 63px;
+    min-width: 100px;
   }
 }

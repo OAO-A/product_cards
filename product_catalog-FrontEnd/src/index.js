@@ -10,6 +10,7 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { HomePage } from './pages/HomePage';
 import { PhonesPage } from './pages/PhonesPage';
 import { BasketPage } from './pages/BasketPage';
+import { FavoritePage } from './pages/FavoritePage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,15 +19,18 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/phones">
-            <Route index element={<PhonesPage />} />
-            <Route path=":itemId" element={<h1>in developing</h1>} />
+            <Route index element={<Navigate to="/phones/1" />} />
+            <Route path=":pageId" element={<PhonesPage />} />
           </Route>
 
           <Route path="/tablets" element={<h1>in developing</h1>} />
           <Route path="/accessories" element={<h1>in developing</h1>} />
-          <Route path="/favorites" element={<h1>in developing</h1>} />
+          <Route path="/favorites" element={<FavoritePage />} />
           <Route path="/basket" element={<BasketPage />} />
-          <Route path="/cardItem" element={<CartItemPage />} />
+          <Route path="/cardItem">
+            <Route index element={<Navigate to=":pageId/" />} />
+            <Route path=":pageId/:id" element={<CartItemPage />} />
+          </Route>
 
           <Route index element={<Navigate to="/home" />} />
           <Route path="/home" element={<HomePage />} />

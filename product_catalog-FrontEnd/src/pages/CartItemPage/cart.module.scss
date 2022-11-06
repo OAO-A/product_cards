@@ -206,6 +206,7 @@
   line-height: 21px;
   letter-spacing: 0em;
   text-align: center;
+  transition: 1s;
 
   @include mixins.onTablet {
     width: 80%;

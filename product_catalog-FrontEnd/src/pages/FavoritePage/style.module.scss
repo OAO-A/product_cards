@@ -11,22 +11,6 @@
     margin: 0 auto;
   }
 }
-.select {
-  background: #323542;
-  height: 40px;
-  padding: 5px 110px 5px 5px;
-  margin-top: 5px;
-  border: none;
-  color: #f1f2f9;
-  font-family: Mont;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-
-  &:focus {
-    border: none;
-  }
-}
 
 .title {
   font-family: "Mont";
@@ -48,15 +32,4 @@
   font-weight: 600;
   color: #75767f;
   margin-bottom: 40px;
-}
-
-.loader__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }

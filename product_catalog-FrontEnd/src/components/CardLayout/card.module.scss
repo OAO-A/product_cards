@@ -4,11 +4,19 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   max-width: 250px;
-
+  box-sizing: border-box;
   background-color: vars.$color-surface1;
   padding: 0 32px;
+  border: solid 1px transparent;
+  @include mixins.onDesktop {
+    min-height: 450px;
+  }
+
+  &:hover {
+    border-color: #323542;
+  }
 
   &__img {
     height: 190px;
@@ -25,6 +33,7 @@
     font-size: 14px;
     line-height: 21px;
     margin-bottom: 8px;
+    text-decoration: none;
   }
 
   &__price {
@@ -90,12 +99,19 @@
     font-weight: 700;
     width: 160px;
     height: 40px;
+    transition: background-color 0.3s ease-out;
 
     &:hover {
       background-color: #a378ff;
     }
 
-    &:focus {
+    &_inCart {
+      transition: background-color 0.3s ease-out;
+      background-color: #323542;
+    }
+
+    &:active {
+      transition: background-color 0.3s ease-out;
       background-color: #323542;
     }
   }
@@ -111,10 +127,12 @@
     }
 
     &:hover {
+      transition: background-color 0.3s ease-out;
       background-color: vars.$color-icons;
     }
 
-    &:focus {
+    &_isActive {
+      transition: background-color 0.3s ease-out;
       background-color: transparent;
 
       &::after {

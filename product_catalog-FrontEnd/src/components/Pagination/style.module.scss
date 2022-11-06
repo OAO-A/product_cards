@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+
+  &__container {
+    display: flex;
+    gap: 16px;
+    margin: 40px 0 80px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    color: #f1f2f9;
+    font-family: Mont;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #161827;
+    padding: 9px 14px;
+    text-decoration: none;
+
+    &_arow {
+      padding: 11px 13px;
+      display: block;
+      background-color: #323542;
+    }
+  }
+}
+
+.isActive {
+  background-color: #905bff;
+}
