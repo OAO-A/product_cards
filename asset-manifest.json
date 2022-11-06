@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/product_cards/static/css/main.699b6d64.css",
-    "main.js": "/product_cards/static/js/main.3ff53b75.js",
-    "static/js/787.75629a37.chunk.js": "/product_cards/static/js/787.75629a37.chunk.js",
-    "static/media/Mont-Regular.otf": "/product_cards/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
-    "static/media/Mont-SemiBold.otf": "/product_cards/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
-    "static/media/Mont-Bold.otf": "/product_cards/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
-    "static/media/01.jpg": "/product_cards/static/media/01.1742c2a7a18f02123a0a.jpg",
-    "static/media/03.jpg": "/product_cards/static/media/03.a57d70f55c46436d7014.jpg",
-    "static/media/02.jpg": "/product_cards/static/media/02.9f67a6622e152411c044.jpg",
-    "static/media/00.jpg": "/product_cards/static/media/00.bcc8d59330807bd155b0.jpg",
-    "static/media/04.jpg": "/product_cards/static/media/04.cf76cad5834823a18f6b.jpg",
-    "static/media/shopping_bag.svg": "/product_cards/static/media/shopping_bag.8594ae92bea0d217c539.svg",
-    "static/media/favoriteIcon.svg": "/product_cards/static/media/favoriteIcon.68e007358b0836eb5041.svg",
-    "index.html": "/product_cards/index.html",
-    "static/media/vector.svg": "/product_cards/static/media/vector.01bebd87e80e6bc3360a.svg",
-    "main.699b6d64.css.map": "/product_cards/static/css/main.699b6d64.css.map",
-    "main.3ff53b75.js.map": "/product_cards/static/js/main.3ff53b75.js.map",
-    "787.75629a37.chunk.js.map": "/product_cards/static/js/787.75629a37.chunk.js.map"
+    "main.css": "/static/css/main.1afe8640.css",
+    "main.js": "/static/js/main.1322a1ee.js",
+    "static/js/787.75629a37.chunk.js": "/static/js/787.75629a37.chunk.js",
+    "static/media/category-phones.png": "/static/media/category-phones.af93d992917380dfe206.png",
+    "static/media/Mont-Regular.otf": "/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
+    "static/media/Mont-SemiBold.otf": "/static/media/Mont-SemiBold.8979d71a3146ca1d761f.otf",
+    "static/media/Mont-Bold.otf": "/static/media/Mont-Bold.03c8c2f6127c1da0fc39.otf",
+    "static/media/01.jpg": "/static/media/01.1742c2a7a18f02123a0a.jpg",
+    "static/media/03.jpg": "/static/media/03.a57d70f55c46436d7014.jpg",
+    "static/media/02.jpg": "/static/media/02.9f67a6622e152411c044.jpg",
+    "static/media/00.jpg": "/static/media/00.bcc8d59330807bd155b0.jpg",
+    "static/media/pngegg.png": "/static/media/pngegg.1cb9f56083be0517228e.png",
+    "static/media/04.jpg": "/static/media/04.cf76cad5834823a18f6b.jpg",
+    "static/media/shopping_bag.svg": "/static/media/shopping_bag.c6d6212a3ea700d6002e.svg",
+    "static/media/favoriteIcon.svg": "/static/media/favoriteIcon.bda5fbc9746bfe2e1329.svg",
+    "static/media/heart.svg": "/static/media/heart.bda5fbc9746bfe2e1329.svg",
+    "static/media/heart2.svg": "/static/media/heart2.d554a185325e4fb06092.svg",
+    "index.html": "/index.html",
+    "static/media/vector.svg": "/static/media/vector.93dcd0cdf72df28e1594.svg",
+    "main.1afe8640.css.map": "/static/css/main.1afe8640.css.map",
+    "main.1322a1ee.js.map": "/static/js/main.1322a1ee.js.map",
+    "787.75629a37.chunk.js.map": "/static/js/787.75629a37.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.699b6d64.css",
-    "static/js/main.3ff53b75.js"
+    "static/css/main.1afe8640.css",
+    "static/js/main.1322a1ee.js"
   ]
 }
