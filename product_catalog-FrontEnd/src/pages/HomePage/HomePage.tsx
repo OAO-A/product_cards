@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from '../../components/CardLayout';
 import Style from '../../components/CardLayout/card.module.scss';
+import { Slider } from '../../components/Slider';
 
 export const HomePage: React.FC = () => {
   const [info, setInfo] = useState([]);
@@ -15,6 +16,7 @@ export const HomePage: React.FC = () => {
     });
   return (
     <>
+      <Slider />
       {info &&
         info.map((card) => {
           const { id, name, fullPrice, price, screen, ram, capacity, image } =
