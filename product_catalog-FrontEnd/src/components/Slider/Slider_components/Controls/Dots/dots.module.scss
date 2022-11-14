@@ -1,0 +1,18 @@
+@use "../../../../../style/mixins.scss" as mixins;
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  cursor: pointer;
+
+  max-height: 320px;
+
+  @include mixins.onTablet {
+    max-height: 189px;
+  }
+
+  @include mixins.onDesktop {
+    max-height: 400px;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../../../../style/mixins.scss" as mixins;
+
+.dot {
+  background-color: #3b3e4a;
+  width: 14px;
+  height: 4px;
+}
+
+.selected {
+  background-color: #f1f2f9;
+}
