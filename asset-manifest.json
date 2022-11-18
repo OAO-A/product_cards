@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/product_cards/static/css/main.ef37ba3c.css",
-    "main.js": "/product_cards/static/js/main.e48af08c.js",
+    "main.js": "/product_cards/static/js/main.acc487ea.js",
     "static/js/787.75629a37.chunk.js": "/product_cards/static/js/787.75629a37.chunk.js",
     "static/media/category-phones.png": "/product_cards/static/media/category-phones.af93d992917380dfe206.png",
     "static/media/Mont-Regular.otf": "/product_cards/static/media/Mont-Regular.1d26d89f7339866d3133.otf",
@@ -23,11 +23,11 @@
     "index.html": "/product_cards/index.html",
     "static/media/vector.svg": "/product_cards/static/media/vector.01bebd87e80e6bc3360a.svg",
     "main.ef37ba3c.css.map": "/product_cards/static/css/main.ef37ba3c.css.map",
-    "main.e48af08c.js.map": "/product_cards/static/js/main.e48af08c.js.map",
+    "main.acc487ea.js.map": "/product_cards/static/js/main.acc487ea.js.map",
     "787.75629a37.chunk.js.map": "/product_cards/static/js/787.75629a37.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef37ba3c.css",
-    "static/js/main.e48af08c.js"
+    "static/js/main.acc487ea.js"
   ]
 }
