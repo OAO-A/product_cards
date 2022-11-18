@@ -37,7 +37,7 @@ export const Footer: React.FC<Props> = ({ isMenuOpen }) => {
         <NavLink to="" className={`${style.footer_nav}`} hidden></NavLink>
       </div>
       <NavLink to="#" className={`${style.footer_nav_last}`}>
-        Back to stop
+        Back to top
       </NavLink>
     </footer>
   );

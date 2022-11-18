@@ -22,7 +22,7 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           className={`${style.nav_item}`}
         >
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
               classNames(`${style.nav_link}`, {
                 [`${style.choosed_link}`]: isActive,
