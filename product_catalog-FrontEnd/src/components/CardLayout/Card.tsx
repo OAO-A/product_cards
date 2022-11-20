@@ -3,22 +3,14 @@ import { Link } from 'react-router-dom';
 import Style from '../../components/CardLayout/card.module.scss';
 import phone from '../../img/category-phones.png';
 import { Phone } from '../../Utils/interface/PhoneCard';
+import { AddtoFavourites } from '../../components/Buttons/AddToFavourites';
+import { AddToBasket } from '../../components/Buttons/AddToBasket';
 
 type Props = {
   device: Phone;
-  handleChangeBasket: (device: Phone) => void;
-  handleChangeFavorite: (device: Phone) => void;
-  inBasket: Phone[];
-  inFavorite: Phone[];
 };
 
-export const Card: React.FC<Props> = ({
-  device,
-  handleChangeBasket,
-  inBasket,
-  handleChangeFavorite,
-  inFavorite,
-}) => {
+export const Card: React.FC<Props> = ({ device }) => {
   const {
     name,
     namespaceId,
@@ -59,29 +51,8 @@ export const Card: React.FC<Props> = ({
       </div>
 
       <div className={Style.card__buttons}>
-        <button
-          className={`${Style.card__buy} ${
-            inBasket.some((deviceInBasket) => deviceInBasket.id === device.id)
-              ? Style.card__buy_inCart
-              : ''
-          }`}
-          onClick={() => handleChangeBasket(device)}
-        >
-          {inBasket.some((deviceInBasket) => deviceInBasket.id === device.id)
-            ? 'In cart'
-            : 'Add to cart'}
-        </button>
-
-        <button
-          className={`${Style.card__fav} ${
-            inFavorite.some(
-              (deviceInFavorite) => deviceInFavorite.id === device.id
-            )
-              ? Style.card__fav_isActive
-              : ''
-          }`}
-          onClick={() => handleChangeFavorite(device)}
-        ></button>
+        <AddToBasket />
+        <AddtoFavourites />
       </div>
     </div>
   );
