@@ -1,0 +1,26 @@
+@use "../../../style/vars" as vars;
+
+.card__fav {
+  background-color: vars.$color-surface2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #3b3e4a;
+
+  &::after {
+    content: url("../../../img/heart.svg");
+  }
+
+  &:hover {
+    transition: background-color 0.3s ease-out;
+    background-color: vars.$color-icons;
+  }
+
+  &_isActive {
+    transition: background-color 0.3s ease-out;
+    background-color: transparent;
+
+    &::after {
+      content: url("../../../img/heart2.svg");
+    }
+  }
+}

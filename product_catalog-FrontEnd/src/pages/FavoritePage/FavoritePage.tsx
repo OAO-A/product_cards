@@ -69,16 +69,7 @@ export const FavoritePage: React.FC = () => {
       >{`${inFavorite.length} models`}</p>
       <div className={`${style.catalog} S--1-4 T--1-12 D--1-24`}>
         {inFavorite.map((device) => {
-          return (
-            <Card
-              key={device.id}
-              device={device}
-              handleChangeBasket={handleChangeBasket}
-              inBasket={inBasket}
-              handleChangeFavorite={handleChangeFavorite}
-              inFavorite={inFavorite}
-            />
-          );
+          return <Card key={device.id} device={device} />;
         })}
       </div>
     </>
