@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
-import './AddToFavourites.scss';
+import Styles from './AddToFavourites.module.scss';
+import { Phone } from '../../../Utils/interface/PhoneCard';
 
-export const AddtoFavourites: React.FC = () => {
-  const [addedToFavorites, setAddedToFavorites] = useState(false);
+type Props = {
+  device: Phone;
+  inFavourites: Phone[];
+  hadleAddToFavorites: (device: Phone) => void;
+};
 
-  const hadleAddToFavorites = () => {
-    setAddedToFavorites((prevState) => !prevState);
-  };
-
+export const AddtoFavourites: React.FC<Props> = ({
+  device,
+  inFavourites,
+  hadleAddToFavorites,
+}) => {
   return (
     <button
       type="button"
-      className={classNames('card__fav', {
-        card__fav_isActive: addedToFavorites,
-      })}
-      onClick={hadleAddToFavorites}
+      className={`${Styles.card__fav} ${
+        inFavourites.some(
+          (deviceInFavorite) => deviceInFavorite.id === device.id
+        )
+          ? Styles.card__fav_isActive
+          : ''
+      }`}
+      onClick={() => hadleAddToFavorites(device)}
     ></button>
   );
 };

@@ -24,9 +24,67 @@ export const Card: React.FC<Props> = ({ device }) => {
     id,
   } = device;
 
+  const [inBasket, setInBasket] = useState([]);
+  const [inFavorite, setInFavorite] = useState([]);
+
+  useEffect(() => {
+    const basket = JSON.parse(localStorage.getItem('basket')) || [];
+    const favorite = JSON.parse(localStorage.getItem('favorite')) || [];
+    setInBasket(basket);
+    setInFavorite(favorite);
+  }, []);
+
+  useEffect(() => {
+    if (inBasket.length) {
+      const toJSON = JSON.stringify(inBasket);
+      console.log(toJSON);
+      localStorage.setItem('basket', toJSON);
+    }
+  }, [inBasket]);
+
+  useEffect(() => {
+    if (inFavorite.length) {
+      const toJSON = JSON.stringify(inFavorite);
+      console.log(toJSON);
+      localStorage.setItem('favorite', toJSON);
+    }
+  }, [inFavorite]);
+
+  const handleChangeBasket = (device) => {
+    if (inBasket.some((deviceInBasket) => deviceInBasket.id === device.id)) {
+      const removeDeviceFromBasket = inBasket.filter(
+        (deviceInBasket) => deviceInBasket.id !== device.id
+      );
+      setInBasket(removeDeviceFromBasket);
+      return;
+    }
+
+    setInBasket((prevBasket) => {
+      const inBasketCopy = [...prevBasket];
+      inBasketCopy.push({ ...device, count: 1 });
+      return inBasketCopy;
+    });
+  };
+
+  const handleChangeFavorite = (device) => {
+    if (inFavorite.some((deviceInBasket) => deviceInBasket.id === device.id)) {
+      const removeDeviceFromFavorite = inFavorite.filter(
+        (deviceInFavorite) => deviceInFavorite.id !== device.id
+      );
+      setInFavorite(removeDeviceFromFavorite);
+      return;
+    }
+
+    setInFavorite((prevFavorite) => {
+      const inFavoriteCopy = [...prevFavorite];
+      inFavoriteCopy.push(device);
+      return inFavoriteCopy;
+    });
+  };
+
   return (
-    <div className={Style.card} data-qa="card">
-      <Link to={`/cardItem/${namespaceId}/${id}`}>
+    <div className={Style.card} data-qa='card'>
+      <Link className={Style.card__link} to={`/cardItem/${namespaceId}/${id}`}>
         <img src={phone} alt="/" className={Style.card__img} />
         <p className={Style.card__name}>{name}</p>
       </Link>
@@ -51,8 +109,16 @@ export const Card: React.FC<Props> = ({ device }) => {
       </div>
 
       <div className={Style.card__buttons}>
-        <AddToBasket />
-        <AddtoFavourites />
+        <AddToBasket
+          device={device}
+          inBasket={inBasket}
+          handleChangeBasket={handleChangeBasket} 
+        />
+        <AddtoFavourites
+          device={device}
+          inFavourites={inFavorite}
+          hadleAddToFavorites={handleChangeFavorite}
+        />
       </div>
     </div>
   );
