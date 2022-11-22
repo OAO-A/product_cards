@@ -27,20 +27,9 @@ export const HomePage: React.FC = () => {
   };
   
   useEffect(() => {
-    getDevicesFromServer()
-      .then(result => setDevices(result[1]))
-      .catch(() => {
-        throw new Error('Something went wrong');
-      });
+    getDevicesFromServer();
   }, []);
-  
-  const newModels = devices.slice(0, 3);
-  const hotPrice = devices.filter((phone) => phone.priceDiscount >= 1300).slice(0, 3);
 
-  const bgcPhone = 'category__wrapper category__wrapper--mobile';
-  const bgcPTablet = 'category__wrapper category__wrapper--tablet';
-  const bgcAccessories = 'category__wrapper category__wrapper--accessories';
-  
   return (
     <>
       <h1 className={`${Style.home__title} S--1-4 T--1-12 D--1-24`}>
@@ -56,7 +45,7 @@ export const HomePage: React.FC = () => {
         <div className="home__buttonprev"></div>
         <div className="home__buttonnext"></div>
       </div>
-      <PhoneSlider phones={newModels} />
+      <PhoneSlider phones={devices} />
 
       <h2 className={`${Style.home__subtitle} ${Style.home__subtitlecategory} S--1-3 T--1-9 D--1-10`}>
         Shop by category
@@ -96,7 +85,7 @@ export const HomePage: React.FC = () => {
         <div className="home__buttonprev"></div>
         <div className="home__buttonnext"></div>
       </div>
-      <PhoneSlider phones={hotPrice} />
+      <PhoneSlider phones={devices} />
     </>
   );
 };
