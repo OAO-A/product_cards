@@ -14,7 +14,7 @@ type Props = {
 export const Header: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <header className={`${style.header}`}>
-      <div className={`${style.main_wrapper}`}>
+      <div id="top" className={`${style.main_wrapper}`}>
         <Link to="/" className={`${style.header_logo}`}>
           <img src={Logo} alt="nice_gadget" />
         </Link>

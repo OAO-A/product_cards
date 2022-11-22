@@ -10,6 +10,27 @@ type Props = {
 };
 
 export const Footer: React.FC<Props> = ({ isMenuOpen }) => {
+  // const showOnPx = 100;
+  // const backToTopButton = document.querySelector('.back-to-top');
+
+  // const scrollContainer = () => {
+  //   return document.documentElement || document.body;
+  // };
+
+  // document.addEventListener('scroll', () => {
+  //   if (scrollContainer().scrollTop > showOnPx) {
+  //     backToTopButton.classList.remove('hidden');
+  //   } else {
+  //     backToTopButton.classList.add('hidden');
+  //   }
+  // });
+
+  // const goToTop = () => {
+  //   document.body.scrollIntoView();
+  // };
+
+  // backToTopButton.addEventListener('click', goToTop);
+
   return (
     <footer
       className={classNames(`${style.footer}`, {
@@ -36,9 +57,11 @@ export const Footer: React.FC<Props> = ({ isMenuOpen }) => {
         </NavLink>
         <NavLink to="" className={`${style.footer_nav}`} hidden></NavLink>
       </div>
-      <NavLink to="#" className={`${style.footer_nav_last}`}>
+      <button className={`${style.footer_nav_last}`} onClick={() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      }}>
         Back to top
-      </NavLink>
+      </button>
     </footer>
   );
 };
