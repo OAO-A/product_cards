@@ -18,6 +18,15 @@
     border-color: #323542;
   }
 
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+
   &__img {
     height: 190px;
     width: fit-content;

@@ -85,3 +85,9 @@
     }
   }
 }
+
+.category {
+  &__block {
+    display: flex;
+  }
+}
