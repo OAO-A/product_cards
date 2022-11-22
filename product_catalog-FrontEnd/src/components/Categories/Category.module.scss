@@ -1,5 +1,11 @@
 @use "../../style/mixins.scss" as mixins;
+
 .category {
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__wrapper {
     position: relative;
     margin-bottom: 24px;
@@ -12,13 +18,6 @@
     &:hover {
       transform: scale(1.02);
     }
-  }
-
-  &__image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border-radius: 8px;
   }
 
   &__title {

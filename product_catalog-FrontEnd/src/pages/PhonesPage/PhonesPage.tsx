@@ -10,8 +10,6 @@ import { motion, MotionConfig } from 'framer-motion';
 
 export const PhonesPage: React.FC = () => {
   const [devices, setDevices] = useState<any>([]);
-  const [inBasket, setInBasket] = useState([]);
-  const [inFavorite, setInFavorite] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [devicesPerPage, setDevicesPerPage] = useState(16);
   const [isLoadin, setIsLoading] = useState(true);
@@ -38,61 +36,6 @@ export const PhonesPage: React.FC = () => {
     setCurrentPage(+pageId);
     getDevicesFromServer();
   }, []);
-
-  useEffect(() => {
-    const basket = JSON.parse(localStorage.getItem('basket')) || [];
-    const favorite = JSON.parse(localStorage.getItem('favorite')) || [];
-    setInBasket(basket);
-    setInFavorite(favorite);
-  }, []);
-
-  useEffect(() => {
-    if (inBasket.length) {
-      const toJSON = JSON.stringify(inBasket);
-      console.log(toJSON);
-      localStorage.setItem('basket', toJSON);
-    }
-  }, [inBasket]);
-
-  useEffect(() => {
-    if (inFavorite.length) {
-      const toJSON = JSON.stringify(inFavorite);
-      console.log(toJSON);
-      localStorage.setItem('favorite', toJSON);
-    }
-  }, [inFavorite]);
-
-  const handleChangeBasket = (device) => {
-    if (inBasket.some((deviceInBasket) => deviceInBasket.id === device.id)) {
-      const removeDeviceFromBasket = inBasket.filter(
-        (deviceInBasket) => deviceInBasket.id !== device.id
-      );
-      setInBasket(removeDeviceFromBasket);
-      return;
-    }
-
-    setInBasket((prevBasket) => {
-      const inBasketCopy = [...prevBasket];
-      inBasketCopy.push({ ...device, count: 1 });
-      return inBasketCopy;
-    });
-  };
-
-  const handleChangeFavorite = (device) => {
-    if (inFavorite.some((deviceInBasket) => deviceInBasket.id === device.id)) {
-      const removeDeviceFromFavorite = inFavorite.filter(
-        (deviceInFavorite) => deviceInFavorite.id !== device.id
-      );
-      setInFavorite(removeDeviceFromFavorite);
-      return;
-    }
-
-    setInFavorite((prevFavorite) => {
-      const inFavoriteCopy = [...prevFavorite];
-      inFavoriteCopy.push(device);
-      return inFavoriteCopy;
-    });
-  };
 
   const indexOfLastDevice = currentPage * devicesPerPage;
   const indexOfFirstDevice = indexOfLastDevice - devicesPerPage;
