@@ -16,7 +16,7 @@ export const PhoneSlider: React.FC<Props> = ({ phones }) => {
     <div className={`${Styles.container} S--1-4 T--1-12 D--1-24`}>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={18}
+        spaceBetween={20}
         slidesPerView={1.4}
         breakpoints={{
           640: { slidesPerView: 2.5 },

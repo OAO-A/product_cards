@@ -2,12 +2,9 @@
 
 .category {
   position: relative;
+  margin-left: 20px;
 
   &__image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
     @include mixins.onTablet {
       height: 235px;
       width: 235px;
