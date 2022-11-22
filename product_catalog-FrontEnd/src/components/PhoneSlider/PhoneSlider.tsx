@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './PhoneSlider.module.scss';
 import { Phone } from '../../Utils/interface/PhoneCard';
 import { Card } from '../CardLayout/Card';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,7 +13,7 @@ export const PhoneSlider: React.FC<Props> = ({ phones }) => {
   const showPhones = phones.slice(1, 9);
 
   return (
-    <div className="S--1-4 T--1-12 D--1-24">
+    <div className={`${Styles.container} S--1-4 T--1-12 D--1-24`}>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={18}
@@ -22,8 +23,8 @@ export const PhoneSlider: React.FC<Props> = ({ phones }) => {
           1200: { slidesPerView: 4 },
         }}
         navigation={{
-          prevEl: '.newModels__buttonprev',
-          nextEl: '.newModels__buttonnext',
+          prevEl: '.home__buttonprev',
+          nextEl: '.home__buttonnext',
         }}
         loop
       >

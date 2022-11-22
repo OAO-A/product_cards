@@ -1,35 +1,39 @@
 @use "../../style/mixins.scss" as mixins;
 
 .category {
-  &__block {
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include mixins.onTablet {
+      height: 235px;
+      width: 235px;
+    }
+
+    @include mixins.onDesktop {
+      height: 370px;
+      width: 370px;
+    }
   }
 
-  &__wrapper {
-    position: relative;
-    margin-bottom: 24px;
-    height: 370px;
-    width: 370px;
-    border-radius: 8px;
-
-    transition: transform 0.3s;
-
-    &:hover {
-      transform: scale(1.02);
-    }
+  &__accessories {
+    width: 100px;
   }
 
   &__title {
     margin-bottom: 4px;
-    font-family: "Mont";
+    font-family: 'Mont';
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
+    color: #fff;
   }
 
   &__text {
-    font-family: "Mont";
+    font-family: 'Mont';
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
