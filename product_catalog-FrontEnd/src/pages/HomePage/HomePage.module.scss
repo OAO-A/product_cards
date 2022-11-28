@@ -3,50 +3,144 @@
 .categories {
   &__block {
     margin: 0 auto;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     text-decoration: none;
+    transition: transform 0.3s;
 
     @include mixins.onTablet {
       margin-bottom: 64px;
+      margin-left: 10px;
     }
 
     @include mixins.onDesktop {
       margin-bottom: 80px;
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-    margin-bottom: 24px;
-    height: 350px;
-    width: 350px;
-    transition: transform 0.3s;
-
-    @include mixins.onTablet {
-      height: 235px;
-      width: 235px;
-    }
-
-    @include mixins.onDesktop {
-      height: 370px;
-      width: 370px;
     }
 
     &:hover {
       transform: scale(1.02);
     }
   }
+}
 
-  &__wrappermobile {
+.category {
+  &__backgroundPhones {
+    position: relative;
+    width: 288px;
+    height: 288px;
     background-color: #6d6474;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
   }
 
-  &__wrappertablet {
+  &__backgroundTablets {
+    position: relative;
+    width: 288px;
+    height: 288px;
     background-color: #b4bdc3;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
   }
 
-  &__wrapperaccessories {
+  &__backgroundAccessories {
+    position: relative;
+    width: 288px;
+    height: 288px;
     background-color: #d53C51;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
+  }
+
+  &__imagePhone {
+    position: absolute;
+    top: -15px;
+  
+    @include mixins.onTablet {
+      height: 265px;
+      width: 265px;
+    }
+
+    @include mixins.onDesktop {
+      height: 470px;
+      width: 470px;
+    }
+  }
+
+  &__imageTablet {
+    position: absolute;
+    
+    @include mixins.onTablet {
+      height: 265px;
+      width: 265px;
+    }
+
+    @include mixins.onDesktop {
+      height: 470px;
+      width: 470px;
+    }
+  }
+
+  &__imageAcc {
+    object-fit: fill;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  
+    @include mixins.onTablet {
+      height: 300px;
+      width: 300px;
+    }
+
+    @include mixins.onDesktop {
+      height: 350px;
+      width: 550px;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 4px;
+    font-family: 'Mont';
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: 'Mont';
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #89939a;
   }
 }
 
@@ -97,10 +191,15 @@
   &__categories {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 
     @include mixins.onTablet {
       flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include mixins.onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     
