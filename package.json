@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/OAO-A/product_cards/issues"
   },
-  "homepage": "https://github.com/OAO-A/product_cards#readme"
+  "homepage": "https://github.com/OAO-A/product_cards#readme",
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2"
+  },
+  "dependencies": {
+    "swiper": "^8.4.4"
+  }
 }

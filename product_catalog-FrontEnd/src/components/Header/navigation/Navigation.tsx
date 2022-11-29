@@ -22,11 +22,12 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           className={`${style.nav_item}`}
         >
           <NavLink
-            to="/"
+            to="/home"
             className={({ isActive }) =>
-              classNames(`${style.nav_link}`,
-                {[`${style.choosed_link}`]: isActive}
-              )}
+              classNames(`${style.nav_link}`, {
+                [`${style.choosed_link}`]: isActive,
+              })
+            }
             onClick={() => isMenuOpen && setIsMenuOpen(false)}
           >
             home
@@ -41,9 +42,10 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           <NavLink
             to="/phones"
             className={({ isActive }) =>
-              classNames(`${style.nav_link}`,
-                {[`${style.choosed_link}`]: isActive}
-              )}
+              classNames(`${style.nav_link}`, {
+                [`${style.choosed_link}`]: isActive,
+              })
+            }
             onClick={() => isMenuOpen && setIsMenuOpen(false)}
           >
             phones
@@ -58,9 +60,10 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           <NavLink
             to="/tablets"
             className={({ isActive }) =>
-              classNames(`${style.nav_link}`,
-                {[`${style.choosed_link}`]: isActive},
-              )}
+              classNames(`${style.nav_link}`, {
+                [`${style.choosed_link}`]: isActive,
+              })
+            }
             onClick={() => isMenuOpen && setIsMenuOpen(false)}
           >
             tablets
@@ -75,9 +78,10 @@ export const Navigation: React.FC<Props> = ({ isMenuOpen, setIsMenuOpen }) => {
           <NavLink
             to="/accessories"
             className={({ isActive }) =>
-              classNames(`${style.nav_link}`,
-                {[`${style.choosed_link}`]: isActive}
-              )}
+              classNames(`${style.nav_link}`, {
+                [`${style.choosed_link}`]: isActive,
+              })
+            }
             onClick={() => isMenuOpen && setIsMenuOpen(false)}
           >
             accessories

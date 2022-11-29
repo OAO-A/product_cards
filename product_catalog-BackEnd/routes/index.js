@@ -7,7 +7,7 @@ const CategoryRouter = require('./CategoryRouter');
 const FavouriteRouter = require('./FavouriteRouter');
 const UserRouter = require('./UserRouter');
 
-router.use('/user', UserRouter);
+// router.use('/user', UserRouter);
 router.use('/device', DeviceRouter);
 router.use('/category', CategoryRouter);
 router.use('/basket', BasketRouter);

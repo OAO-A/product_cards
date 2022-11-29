@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       name: DataTypes.STRING,
       priceRegular: DataTypes.INTEGER,
       priceDiscount: DataTypes.INTEGER,
-      description: DataTypes.ARRAY(DataTypes.JSON),
+      description: DataTypes.TEXT,
       screen: DataTypes.STRING,
       capacity: DataTypes.STRING,
       capacityAvailable: DataTypes.ARRAY(DataTypes.STRING),
@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Device',
-    }
+    },
   );
   return Device;
 };

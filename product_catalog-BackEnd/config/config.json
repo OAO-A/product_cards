@@ -1,23 +1,26 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "tinkiwinki",
-    "database": "Nice_Gadgets",
-    "host": "localhost",
-    "dialect": "postgres"
+    "username": "zeainlxtorhhxr",
+    "password": "5aeedc097b51e7d4c414f7b61ac40012c4729be466735e6c24c905f4ce5306b2",
+    "database": "d2t1l9v3h1h7sm",
+    "host": "ec2-54-82-205-3.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": 5432
   },
   "test": {
-    "username": "postgres",
-    "password": "tinkiwinki",
-    "database": "Nice_Gadgets",
-    "host": "localhost",
-    "dialect": "postgres"
+    "username": "zeainlxtorhhxr",
+    "password": "5aeedc097b51e7d4c414f7b61ac40012c4729be466735e6c24c905f4ce5306b2",
+    "database": "d2t1l9v3h1h7sm",
+    "host": "ec2-54-82-205-3.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": 5432
   },
   "production": {
-    "username": "postgres",
-    "password": "tinkiwinki",
-    "database": "Nice_Gadgets",
-    "host": "localhost",
-    "dialect": "postgres"
+    "username": "zeainlxtorhhxr",
+    "password": "5aeedc097b51e7d4c414f7b61ac40012c4729be466735e6c24c905f4ce5306b2",
+    "database": "d2t1l9v3h1h7sm",
+    "host": "ec2-54-82-205-3.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "port": 5432
   }
 }

@@ -1,0 +1,62 @@
+@use "../../style/mixins.scss" as mixins;
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 1140px;
+  justify-content: center;
+  align-items: center;
+  @include mixins.onDesktop {
+    margin: 0 auto;
+  }
+}
+.select {
+  background: #323542;
+  height: 40px;
+  padding: 5px 110px 5px 5px;
+  margin-top: 5px;
+  border: none;
+  color: #f1f2f9;
+  font-family: Mont;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+
+  &:focus {
+    border: none;
+  }
+}
+
+.title {
+  font-family: "Mont";
+  font-weight: 800;
+  font-size: 32px;
+
+  color: #f1f2f9;
+  margin-bottom: 17px;
+  padding-top: 30px;
+
+  @include mixins.onTablet {
+    font-size: 48px;
+  }
+}
+
+.subtitle {
+  font-family: Mont;
+  font-size: 14px;
+  font-weight: 600;
+  color: #75767f;
+  margin-bottom: 40px;
+}
+
+.loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

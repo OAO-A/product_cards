@@ -1,0 +1,17 @@
+@use "../../../../style/mixins.scss" as mixins;
+
+.slide_list {
+  object-fit: contain;
+  grid-row: 1/1;
+  display: flex;
+  margin-bottom: 18px;
+  max-height: 320px;
+
+  @include mixins.onTablet {
+    max-height: 189px;
+  }
+
+  @include mixins.onDesktop {
+    max-height: 400px;
+  }
+}

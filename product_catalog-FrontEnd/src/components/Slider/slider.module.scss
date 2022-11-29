@@ -1,0 +1,28 @@
+@use "../../style/mixins.scss" as mixins;
+
+.slider {
+  display: grid;
+  justify-content: center;
+  overflow-x: hidden;
+  margin-bottom: 80px;
+}
+
+.arrow {
+  display: none;
+  width: 32px;
+  background-color: #323542;
+  grid-row: 1/1;
+  color: #f1f2f9;
+  cursor: pointer;
+
+  @include mixins.onTablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 189px;
+  }
+
+  @include mixins.onDesktop {
+    max-height: 400px;
+  }
+}

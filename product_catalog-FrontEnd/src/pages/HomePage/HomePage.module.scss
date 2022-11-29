@@ -1,0 +1,218 @@
+@use "../../style/mixins.scss" as mixins;
+
+.categories {
+  &__block {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+
+    @include mixins.onTablet {
+      margin-bottom: 64px;
+      margin-left: 10px;
+    }
+
+    @include mixins.onDesktop {
+      margin-bottom: 80px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.category {
+  &__backgroundPhones {
+    position: relative;
+    width: 288px;
+    height: 288px;
+    background-color: #6d6474;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
+  }
+
+  &__backgroundTablets {
+    position: relative;
+    width: 288px;
+    height: 288px;
+    background-color: #b4bdc3;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
+  }
+
+  &__backgroundAccessories {
+    position: relative;
+    width: 288px;
+    height: 288px;
+    background-color: #d53C51;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include mixins.onTablet {
+      width: 230px;
+      height: 230px;
+    }
+
+    @include mixins.onDesktop {
+      width: 368px;
+      height: 368px;
+    }
+  }
+
+  &__imagePhone {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+  
+    @include mixins.onTablet {
+      height: 265px;
+      width: 265px;
+    }
+
+    @include mixins.onDesktop {
+      height: 470px;
+      width: 470px;
+    }
+  }
+
+  &__imageTablet {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    height: 300px;
+    width: 300px;
+    
+    @include mixins.onTablet {
+      height: 265px;
+      width: 265px;
+    }
+
+    @include mixins.onDesktop {
+      height: 470px;
+      width: 470px;
+    }
+  }
+
+  &__imageAcc {
+    object-fit: fill;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    height: 250px;
+    width: 500px;
+  
+    @include mixins.onTablet {
+      height: 300px;
+      width: 300px;
+    }
+
+    @include mixins.onDesktop {
+      height: 350px;
+      width: 700px;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 4px;
+    font-family: 'Mont';
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__text {
+    font-family: 'Mont';
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #89939a;
+  }
+}
+
+.home {
+  &__title {
+    margin: 24px 0;
+    font-family: 'Mont';
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -1%;
+    font-weight: 800;
+    color: #fff;
+
+    @include mixins.onTablet {
+      margin: 37px 0;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -1%;
+      font-weight: 800;
+    }
+  }
+
+  &__buttonwrapper {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    font-family: 'Mont';
+    font-size: 22px;
+    line-height: 31px;
+    letter-spacing: -1%;
+    font-weight: 800;
+    color: #fff;
+
+    @include mixins.onTablet {
+      font-size: 32px;
+      line-height: 41px;
+      letter-spacing: -1%;
+      font-weight: 800;
+    }
+  }
+
+  &__subtitlecategory {
+    margin-bottom: 24px;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.onTablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include mixins.onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    
+  }
+}
