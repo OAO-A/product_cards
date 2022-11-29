@@ -13,7 +13,7 @@ export const PhoneSlider: React.FC<Props> = ({ phones }) => {
   const showPhones = phones.slice(1, 9);
 
   return (
-    <div className={`${Styles.container} S--1-4 T--1-11 D--1-24`}>
+    <div className={`${Styles.container} S--1-4 T--1-12 D--1-24`}>
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={15}
@@ -28,7 +28,7 @@ export const PhoneSlider: React.FC<Props> = ({ phones }) => {
         }}
         loop={true}
       >
-        {showPhones.map((phone) => (
+        {phones.map((phone) => (
           <SwiperSlide key={phone.id}>
             <Card device={phone} />
           </SwiperSlide>

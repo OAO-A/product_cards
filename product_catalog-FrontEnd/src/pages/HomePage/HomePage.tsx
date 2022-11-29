@@ -40,13 +40,11 @@ export const HomePage: React.FC = () => {
       <h2 className={`${Style.home__subtitle} S--1-3 T--1-9 D--1-10`}>
         Brand new models
       </h2>
-      <div
-        className={`${Style.home__buttonwrapper} S--4-4 T--11-12 D--23-24`}
-      >
+      <div className={`${Style.home__buttonwrapper} S--4-4 T--11-12 D--23-24`}>
         <div className="home__buttonprev"></div>
         <div className="home__buttonnext"></div>
       </div>
-      <PhoneSlider phones={hotPrices} />
+      <PhoneSlider phones={devices} />
 
       <h2 className={`${Style.home__subtitle} ${Style.home__subtitlecategory} S--1-3 T--1-9 D--1-10`}>
         Shop by category
@@ -83,7 +81,7 @@ export const HomePage: React.FC = () => {
         <div className="home__buttonprev"></div>
         <div className="home__buttonnext"></div>
       </div>
-      <PhoneSlider phones={devices} />
+      <PhoneSlider phones={hotPrices} />
     </>
   );
 };
